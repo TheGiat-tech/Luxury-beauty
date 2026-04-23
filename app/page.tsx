@@ -56,7 +56,7 @@ const products: Product[] = [
     image: "https://m.media-amazon.com/images/I/71Gf86P5rLL._SL1500_.jpg",
     thumbnailImage: "https://m.media-amazon.com/images/I/71Gf86P5rLL._SL1500_.jpg",
     rating: 4.8,
-    reviewCount: 2847,
+    reviewCount: 26,
     usage: "AM & PM",
     keyActive: "Grand Rose Extracts",
     skinType: "All Skin Types",
@@ -92,8 +92,8 @@ const products: Product[] = [
     awardText: "text-white",
     image: "https://m.media-amazon.com/images/I/61Rq9eAhRTL._SL1500_.jpg",
     thumbnailImage: "https://m.media-amazon.com/images/I/61Rq9eAhRTL._SL1500_.jpg",
-    rating: 4.8,
-    reviewCount: 1952,
+    rating: 4.6,
+    reviewCount: 34,
     usage: "AM & PM",
     keyActive: "Rose Wax Complex",
     skinType: "Dry to Normal",
@@ -128,8 +128,8 @@ const products: Product[] = [
     awardText: "text-white",
     image: "https://m.media-amazon.com/images/I/61lMtjfOpqL._SL1500_.jpg",
     thumbnailImage: "https://m.media-amazon.com/images/I/61lMtjfOpqL._SL1500_.jpg",
-    rating: 4.7,
-    reviewCount: 1124,
+    rating: 4.8,
+    reviewCount: 29,
     usage: "AM & PM",
     keyActive: "Grand Rose Extracts",
     skinType: "All Skin Types",
@@ -164,8 +164,8 @@ const products: Product[] = [
     awardText: "text-white",
     image: "https://m.media-amazon.com/images/I/51RFfDtchYL._SL1500_.jpg",
     thumbnailImage: "https://m.media-amazon.com/images/I/51RFfDtchYL._SL1500_.jpg",
-    rating: 4.7,
-    reviewCount: 986,
+    rating: 4.6,
+    reviewCount: 163,
     usage: "AM & PM",
     keyActive: "Phyto-Nature Complex",
     skinType: "All Skin Types",
@@ -200,8 +200,8 @@ const products: Product[] = [
     awardText: "text-white",
     image: "https://m.media-amazon.com/images/I/5109GVacyJL._SL1500_.jpg",
     thumbnailImage: "https://m.media-amazon.com/images/I/5109GVacyJL._SL1500_.jpg",
-    rating: 4.8,
-    reviewCount: 12483,
+    rating: 4.5,
+    reviewCount: 734,
     usage: "AM & PM",
     keyActive: "Hyaluronic + Peptides",
     skinType: "All Skin Types",
@@ -658,15 +658,10 @@ export default function Home() {
                   The Beauty Tech Review Team
                 </p>
                 <p className="text-sm text-slate-500 mb-3">
-                  Skincare Device Specialists
+                  Luxury Skincare Editorial Team
                 </p>
                 <p className="text-slate-600 leading-relaxed text-sm">
-                  With over 10 years of hands-on skincare device testing, our team of
-                  beauty technology specialists and licensed estheticians has evaluated
-                  hundreds of at-home devices. We work closely with board-certified
-                  dermatologists to assess clinical efficacy, safety, and real-world
-                  usability—so every recommendation you read is grounded in rigorous,
-                  expert-led analysis.
+                  Our team consists of clinical skincare experts and former cosmetic formulation consultants. We analyze high-performance active ingredients, molecular stability, and long-term efficacy to ensure our recommendations represent the pinnacle of skin health.
                 </p>
               </div>
             </div>
