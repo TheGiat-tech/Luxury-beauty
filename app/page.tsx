@@ -37,10 +37,10 @@ interface Product {
   description: string
   bottomLine: string
   affiliateLink: string
-  treatmentTime: string
-  wavelengths: string
-  fdaStatus: string
-  warranty: string
+  usage: string
+  keyActive: string
+  skinType: string
+  size: string
 }
 
 // ─── Product Data ─────────────────────────────────────────────────────────────
@@ -57,10 +57,10 @@ const products: Product[] = [
     thumbnailImage: "https://m.media-amazon.com/images/I/71Gf86P5rLL._SL1500_.jpg",
     rating: 4.8,
     reviewCount: 2847,
-    treatmentTime: "AM & PM",
-    wavelengths: "Grand Rose Extracts",
-    fdaStatus: "All Skin Types",
-    warranty: "30ml / 1 fl oz",
+    usage: "AM & PM",
+    keyActive: "Grand Rose Extracts",
+    skinType: "All Skin Types",
+    size: "30ml / 1 fl oz",
     keySpecs: [
       "Grand Rose Extracts skin-renewing complex",
       "Accelerates surface cell renewal for visible smoothness",
@@ -94,10 +94,10 @@ const products: Product[] = [
     thumbnailImage: "https://m.media-amazon.com/images/I/61Rq9eAhRTL._SL1500_.jpg",
     rating: 4.8,
     reviewCount: 1952,
-    treatmentTime: "AM & PM",
-    wavelengths: "Rose Wax Complex",
-    fdaStatus: "Dry to Normal",
-    warranty: "60ml / 2 fl oz",
+    usage: "AM & PM",
+    keyActive: "Rose Wax Complex",
+    skinType: "Dry to Normal",
+    size: "60ml / 2 fl oz",
     keySpecs: [
       "24-hour intense hydration seal",
       "Visible firming and lifting effect from first use",
@@ -130,10 +130,10 @@ const products: Product[] = [
     thumbnailImage: "https://m.media-amazon.com/images/I/61lMtjfOpqL._SL1500_.jpg",
     rating: 4.7,
     reviewCount: 1124,
-    treatmentTime: "AM & PM",
-    wavelengths: "Grand Rose Extracts",
-    fdaStatus: "All Skin Types",
-    warranty: "20ml / 0.7 fl oz",
+    usage: "AM & PM",
+    keyActive: "Grand Rose Extracts",
+    skinType: "All Skin Types",
+    size: "20ml / 0.7 fl oz",
     keySpecs: [
       "Targets crow's feet and under-eye bags",
       "Specifically formulated for the delicate eye area",
@@ -166,10 +166,10 @@ const products: Product[] = [
     thumbnailImage: "https://m.media-amazon.com/images/I/51RFfDtchYL._SL1500_.jpg",
     rating: 4.7,
     reviewCount: 986,
-    treatmentTime: "AM & PM",
-    wavelengths: "Phyto-Nature Complex",
-    fdaStatus: "All Skin Types",
-    warranty: "40ml / 1.3 fl oz",
+    usage: "AM & PM",
+    keyActive: "Phyto-Nature Complex",
+    skinType: "All Skin Types",
+    size: "40ml / 1.3 fl oz",
     keySpecs: [
       "Dual-phase serum for amplified absorption",
       "Firms and visibly lifts sagging skin",
@@ -202,10 +202,10 @@ const products: Product[] = [
     thumbnailImage: "https://m.media-amazon.com/images/I/5109GVacyJL._SL1500_.jpg",
     rating: 4.8,
     reviewCount: 12483,
-    treatmentTime: "AM & PM",
-    wavelengths: "Hyaluronic + Peptides",
-    fdaStatus: "All Skin Types",
-    warranty: "50ml / 1.7 fl oz",
+    usage: "AM & PM",
+    keyActive: "Hyaluronic + Peptides",
+    skinType: "All Skin Types",
+    size: "50ml / 1.7 fl oz",
     keySpecs: [
       "Award-winning, globally bestselling formula",
       "Hyaluronic acid and peptide complex",
@@ -234,14 +234,14 @@ const topPicks = products.slice(0, 4)
 
 // ─── Comparison Table Features ────────────────────────────────────────────────
 
-type ComparisonKey = "wavelengths" | "treatmentTime" | "fdaStatus" | "warranty"
+type ComparisonKey = "keyActive" | "usage" | "skinType" | "size"
 
 const comparisonFeatures: { label: string; key: ComparisonKey | "price" }[] = [
-  { label: "Key Active", key: "wavelengths" },
-  { label: "Usage", key: "treatmentTime" },
-  { label: "Skin Type", key: "fdaStatus" },
+  { label: "Key Active", key: "keyActive" },
+  { label: "Usage", key: "usage" },
+  { label: "Skin Type", key: "skinType" },
   { label: "Price", key: "price" },
-  { label: "Size", key: "warranty" },
+  { label: "Size", key: "size" },
 ]
 
 // ─── JSON-LD Product Schema ───────────────────────────────────────────────────
