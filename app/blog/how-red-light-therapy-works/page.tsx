@@ -178,19 +178,22 @@ export default function HowRedLightTherapyWorks() {
           className="text-2xl font-bold text-slate-900 mb-4"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
-          Ready to try it yourself?
+          Amplify your results with Prestige skincare.
         </h3>
         <p className="text-slate-600 leading-relaxed mb-6">
-          Now that you understand the science, it&apos;s time to find the right device. We&apos;ve
-          independently tested and rigorously reviewed the leading LED face masks on the market —
-          comparing wavelength accuracy, irradiance output, build quality, and value. Our guide
-          cuts through the noise so you can invest with confidence.
+          Professional light therapy delivers its most transformative results when paired with
+          high-performance Prestige topicals. Luxurious Serums and Rich Creams from houses like
+          Lancôme and Elemis are formulated to work in concert with treatments that stimulate
+          cellular renewal — giving newly energised skin exactly what it needs to rebuild and
+          radiate. Active ingredients such as Pro-Xylane and Hyaluronic Acid act as the essential
+          &apos;fuel&apos; that energised skin cells require after light therapy, accelerating
+          visible rejuvenation and locking in lasting luminosity.
         </p>
         <Link
           href="/"
           className="inline-block bg-slate-900 text-white text-sm font-semibold px-7 py-3 rounded-full hover:bg-slate-700 transition-colors duration-200"
         >
-          Read Our Reviews of the Best LED Face Masks →
+          Discover the Best Luxury Skincare Essentials of 2026 →
         </Link>
       </div>
     </main>
