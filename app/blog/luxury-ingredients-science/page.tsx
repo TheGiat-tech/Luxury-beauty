@@ -154,10 +154,10 @@ export default function LuxuryIngredientsScience() {
             the economics of proprietary R&amp;D in cosmetic formulation.
           </p>
           <p>
-            Pro-Xylane (chemically: hydroxypropyltrimonium hyaluronate&apos;s structural
-            cousin, derived from xylose — a plant sugar extracted from beech wood via a
-            patented process developed by L&apos;Oréal Research) is a glycosaminoglycan-like
-            molecule that has demonstrated a remarkable ability to stimulate the production of
+            Pro-Xylane (chemically: hydroxypropyl tetrahydropyrantriol — a C-glycoside
+            derived from xylose, a plant sugar extracted from beech wood via a patented process
+            developed by L&apos;Oréal Research) is a glycosaminoglycan-boosting molecule that
+            has demonstrated a remarkable ability to stimulate the production of
             glycosaminoglycans — including hyaluronic acid — within the dermis. Unlike
             conventional humectants that draw moisture to the skin&apos;s surface, Pro-Xylane
             works at a structural level, reinforcing the extracellular matrix that keeps
