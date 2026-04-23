@@ -154,7 +154,7 @@ const products: Product[] = [
       "Flexible silicone adapts to every face shape",
     ],
     cons: [
-      "Fit around the nose area can feel slightly tight for some face shapes.",
+      "Fit around the nose area can feel slightly tight for some face shapes",
       "Accompanying app has limited features",
     ],
     description:
@@ -537,8 +537,8 @@ export default function Home() {
                 <div className="p-6 md:p-8">
                   <div className="flex flex-col md:flex-row gap-8">
                     {/* Left — Image + Price + CTA */}
-                     <div className="w-full md:w-72 flex-shrink-0">
-                       <div className="h-48 md:h-auto md:aspect-[4/3] rounded-xl overflow-hidden bg-stone-100">
+                    <div className="w-full md:w-72 flex-shrink-0">
+                      <div className="h-48 md:h-auto md:aspect-[4/3] rounded-xl overflow-hidden bg-stone-100">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={product.image}
