@@ -392,6 +392,12 @@ export default function Home() {
             >
               The Science
             </Link>
+            <Link
+              href="/blog/luxury-ingredients-science"
+              className="hover:text-slate-900 transition-colors"
+            >
+              Ingredients
+            </Link>
           </nav>
         </div>
       </header>
@@ -639,6 +645,49 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* ── Further Reading ─────────────────────────────────────── */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">
+            Further Reading
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            <Link
+              href="/blog/how-red-light-therapy-works"
+              className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200"
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-3">
+                The Science of Skin
+              </p>
+              <h3 className="text-lg font-bold text-slate-900 leading-snug mb-3 group-hover:text-amber-600 transition-colors">
+                How Does Red Light Therapy Actually Work for Anti-Aging?
+              </h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                From ATP production to collagen stimulation — the cellular science behind LED face masks explained clearly by our experts.
+              </p>
+              <span className="inline-flex items-center gap-1 mt-4 text-xs font-semibold text-slate-700 group-hover:text-amber-600 transition-colors">
+                Read article <ArrowRight className="w-3 h-3" />
+              </span>
+            </Link>
+            <Link
+              href="/blog/luxury-ingredients-science"
+              className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200"
+            >
+              <p className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-3">
+                Investment in Skin Health
+              </p>
+              <h3 className="text-lg font-bold text-slate-900 leading-snug mb-3 group-hover:text-amber-600 transition-colors">
+                The $280 Serum Secret: Why High-Ticket Skincare Ingredients Actually Cost More
+              </h3>
+              <p className="text-sm text-slate-500 leading-relaxed">
+                A deep-dive into the extraction complexity, molecular stability, and patented actives that justify luxury serum price tags.
+              </p>
+              <span className="inline-flex items-center gap-1 mt-4 text-xs font-semibold text-slate-700 group-hover:text-amber-600 transition-colors">
+                Read article <ArrowRight className="w-3 h-3" />
+              </span>
+            </Link>
           </div>
         </section>
 
