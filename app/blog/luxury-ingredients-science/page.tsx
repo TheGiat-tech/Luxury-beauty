@@ -226,13 +226,13 @@ export default function LuxuryIngredientsScience() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="/best-luxury-skincare"
+            href="/"
             className="inline-block bg-slate-900 text-white text-sm font-semibold px-7 py-3 rounded-full hover:bg-slate-700 transition-colors duration-200 text-center"
           >
             Best Luxury Skincare Guide →
           </Link>
           <Link
-            href="/brand-guides/elemis"
+            href="/best-elemis-skincare"
             className="inline-block border border-slate-900 text-slate-900 text-sm font-semibold px-7 py-3 rounded-full hover:bg-slate-100 transition-colors duration-200 text-center"
           >
             ELEMIS Brand Guide →
