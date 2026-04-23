@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Breadcrumb from "../components/Breadcrumb"
 
 export const metadata: Metadata = {
   title: "Terms of Service | Luxury Beauty",
@@ -9,6 +10,7 @@ export default function TermsOfService() {
   return (
     <main className="py-16 px-4">
       <div className="max-w-3xl mx-auto">
+        <Breadcrumb />
         <h1
           className="font-display text-4xl font-bold text-slate-900 mb-4"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
