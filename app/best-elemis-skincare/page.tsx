@@ -180,7 +180,7 @@ function StarRating() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
-export default function BestElemisSkincareePage() {
+export default function BestElemsSkincorePage() {
   const [activeProductId, setActiveProductId] = useState<string>(products[0].id)
   const [showStickyBar, setShowStickyBar] = useState(false)
   const productRefs = useRef<Map<string, Element>>(new Map())
