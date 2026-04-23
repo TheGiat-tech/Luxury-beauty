@@ -757,21 +757,6 @@ export default function Home() {
         </section>
       </main>
 
-      {/* ── Footer ─────────────────────────────────────────────── */}
-      <footer className="border-t border-gray-200 bg-white py-8">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <p className="text-xs text-slate-400 leading-relaxed max-w-2xl mx-auto">
-            <strong className="text-slate-600">Affiliate Disclosure:</strong>{" "}
-            This article contains affiliate links. If you purchase through these
-            links, Luxury Beauty may earn a commission at no additional cost to
-            you. Our reviews are independently researched and reflect genuine
-            expert opinions.{" "}
-            <strong className="text-slate-600">As an Amazon Associate, we earn from qualifying purchases.</strong>{" "}
-            Prices and availability are subject to change.
-          </p>
-        </div>
-      </footer>
-
       {/* ── Sticky Mobile CTA ──────────────────────────────────── */}
       <div
         className={`fixed bottom-0 left-0 right-0 z-50 md:hidden transition-transform duration-300 ${
