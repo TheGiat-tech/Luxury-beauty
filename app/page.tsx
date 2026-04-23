@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Script from "next/script"
+import Link from "next/link"
 import {
   CheckCircle2,
   XCircle,
@@ -393,6 +394,12 @@ export default function Home() {
             >
               Compare
             </a>
+            <Link
+              href="/blog/how-red-light-therapy-works"
+              className="hover:text-slate-900 transition-colors"
+            >
+              The Science
+            </Link>
           </nav>
         </div>
       </header>

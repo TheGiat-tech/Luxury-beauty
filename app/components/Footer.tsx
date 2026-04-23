@@ -21,6 +21,9 @@ export default function Footer() {
         </p>
 
         <nav className="flex justify-center gap-4 text-xs text-slate-400" aria-label="Legal">
+          <Link href="/blog/how-red-light-therapy-works" className="hover:text-slate-600 underline underline-offset-2 transition-colors">
+            How Red Light Therapy Works
+          </Link>
           <Link href="/privacy-policy" className="hover:text-slate-600 underline underline-offset-2 transition-colors">
             Privacy Policy
           </Link>
