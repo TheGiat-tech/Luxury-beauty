@@ -26,8 +26,6 @@ interface Product {
   award: string
   awardBg: string
   awardText: string
-  price: number
-  priceDisplay: string
   image: string
   thumbnailImage: string
   rating: number
@@ -36,6 +34,7 @@ interface Product {
   pros: string[]
   cons: string[]
   description: string
+  bottomLine: string
   affiliateLink: string
   treatmentTime: string
   wavelengths: string
@@ -47,43 +46,42 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: "omnilux-contour",
-    name: "Omnilux Contour Face",
-    brand: "Omnilux",
+    id: "theraface-mask",
+    name: "TheraFace Mask",
+    brand: "Therabody",
     award: "Best Overall",
     awardBg: "bg-amber-500",
     awardText: "text-white",
-    price: 395,
-    priceDisplay: "$395",
-    image: "https://placehold.co/800x600/f8f4f0/9ca3af?text=Omnilux+Contour+Face",
-    thumbnailImage: "https://placehold.co/200x200/f8f4f0/9ca3af?text=Omnilux",
-    rating: 4.9,
-    reviewCount: 2847,
+    image: "https://placehold.co/800x600/fefce8/9ca3af?text=TheraFace+Mask",
+    thumbnailImage: "https://placehold.co/200x200/fefce8/9ca3af?text=TheraFace",
+    rating: 4.8,
+    reviewCount: 3241,
     treatmentTime: "10 min",
-    wavelengths: "633nm + 830nm",
+    wavelengths: "Red + Blue + NIR",
     fdaStatus: "FDA-Cleared",
     warranty: "1 Year",
     keySpecs: [
-      "633nm Red + 830nm Near-Infrared LED",
-      "FDA-cleared for at-home use",
-      "Flexible silicone construction",
-      "10-minute daily treatment sessions",
-      "Mobile app with treatment tracking",
+      "648 medical-grade LED lights",
+      "Red, Blue, and Near-Infrared light options",
+      "Tension-relieving vibration therapy",
+      "Cordless design for full freedom of movement",
+      "Official Therabody Amazon storefront",
     ],
     pros: [
-      "Clinically proven wavelengths (633nm + 830nm)",
-      "Comfortable, flexible fit for all face shapes",
-      "FDA-cleared medical device",
-      "Comprehensive app guidance and reminders",
-      "Visible improvement in as little as 4 weeks",
+      "Maximum light density (648 LEDs)",
+      "Combines skincare with relaxing vibration massage",
+      "Official Amazon storefront guarantee",
+      "Versatile Red, Blue, and Near-Infrared modes",
     ],
     cons: [
-      "Premium price point ($395)",
-      "Requires consistent daily use for best results",
+      "Heavier than silicone-only masks",
+      "Premium luxury price point",
     ],
     description:
-      "The Omnilux Contour Face is the gold standard in at-home LED therapy, combining 633nm red light for collagen stimulation and 830nm near-infrared to penetrate deeper tissues. Its flexible silicone design ensures full-face contact, maximising light delivery for anti-aging results backed by clinical studies.",
-    affiliateLink: "https://www.amazon.com/s?k=Omnilux+Contour+Face",
+      "The TheraFace Mask by Therabody is the ultimate luxury at-home spa device. It uniquely combines clinical-grade LED light therapy with tension-melting vibration massage to rejuvenate skin and relax facial muscles simultaneously — delivering a dual spa-and-skincare experience that no other device can replicate.",
+    bottomLine:
+      "The Bottom Line: If you want the ultimate luxury spa experience that combines clinical LED therapy with tension-melting massage, this is the absolute gold standard.",
+    affiliateLink: "https://www.amazon.com/s?k=Therabody+TheraFace+Mask",
   },
   {
     id: "dr-dennis-gross",
@@ -92,8 +90,6 @@ const products: Product[] = [
     award: "Best for Anti-Aging",
     awardBg: "bg-purple-600",
     awardText: "text-white",
-    price: 435,
-    priceDisplay: "$435",
     image: "https://placehold.co/800x600/f5f0ff/9ca3af?text=Dr.+Dennis+Gross",
     thumbnailImage: "https://placehold.co/200x200/f5f0ff/9ca3af?text=DDG",
     rating: 4.7,
@@ -104,66 +100,64 @@ const products: Product[] = [
     warranty: "1 Year",
     keySpecs: [
       "100 red + 62 blue LEDs (162 total)",
-      "Just 3-minute treatment sessions",
-      "Dermatologist developed formula",
+      "Just 3-minute daily treatment sessions",
+      "Dermatologist-developed formula",
       "Targets wrinkles and acne simultaneously",
       "Auto-shut-off timer for precision",
     ],
     pros: [
-      "Fastest treatment time (just 3 minutes)",
-      "Dual-action red + blue for aging and acne",
+      "Ultra-fast 3-minute daily treatment",
+      "Dual-action red and blue lights for aging and acne",
       "Developed by a renowned NYC dermatologist",
       "Proven visible results in clinical studies",
     ],
     cons: [
-      "Highest price among comparable devices",
-      "Rigid design may not suit all face shapes",
+      "Rigid design may not contour perfectly to all face shapes",
     ],
     description:
-      "Developed by one of New York's most sought-after dermatologists, the DRx SpectraLite FaceWare Pro delivers 162 LEDs at clinical wavelengths for simultaneous anti-aging and acne treatment in just 3 minutes—making it the busiest beauty lover's dream device.",
+      "Developed by one of New York's top dermatologists, the DRx SpectraLite FaceWare Pro delivers 162 LEDs at clinical wavelengths for simultaneous anti-aging and acne treatment in just 3 minutes — making it the busiest beauty lover's dream device.",
+    bottomLine:
+      "The Bottom Line: For the busy professional who wants clinical-grade results but only has 3 minutes a day to spare, this is an unbeatable investment.",
     affiliateLink:
       "https://www.amazon.com/s?k=Dr+Dennis+Gross+DRx+SpectraLite+FaceWare+Pro",
   },
   {
-    id: "currentbody-skin",
-    name: "CurrentBody Skin LED Light Therapy Mask",
-    brand: "CurrentBody",
-    award: "Best Value",
+    id: "higherdose-mask",
+    name: "HigherDOSE Red Light Face Mask",
+    brand: "HigherDOSE",
+    award: "Best Flexible/Value",
     awardBg: "bg-emerald-600",
     awardText: "text-white",
-    price: 295,
-    priceDisplay: "$295",
-    image:
-      "https://placehold.co/800x600/f0fdf4/9ca3af?text=CurrentBody+Skin",
-    thumbnailImage:
-      "https://placehold.co/200x200/f0fdf4/9ca3af?text=CB",
+    image: "https://placehold.co/800x600/f0fdf4/9ca3af?text=HigherDOSE+Mask",
+    thumbnailImage: "https://placehold.co/200x200/f0fdf4/9ca3af?text=HigherDOSE",
     rating: 4.6,
-    reviewCount: 3102,
+    reviewCount: 1487,
     treatmentTime: "10 min",
-    wavelengths: "633nm + 830nm",
-    fdaStatus: "CE + FDA Registered",
+    wavelengths: "630nm + 830nm",
+    fdaStatus: "FDA-Registered",
     warranty: "1 Year",
     keySpecs: [
-      "633nm + 830nm clinical wavelengths",
-      "Flexible silicone for all face shapes",
-      "10-minute sessions, 4× per week recommended",
-      "CE and FDA registered",
-      "Visible results documented in 4 weeks",
+      "630nm red and 830nm near-infrared wavelengths",
+      "Medical-grade flexible silicone construction",
+      "Cordless design — perfect for travel",
+      "10-minute daily sessions",
+      "Easy-clean silicone surface",
     ],
     pros: [
-      "Most affordable clinical-grade option",
-      "Same wavelengths as devices costing twice as much",
-      "CE and FDA registered",
-      "Flexible silicone adapts to every face shape",
+      "Extremely comfortable and contours to the face",
+      "Cordless and great for travel",
+      "Easy to clean medical-grade silicone",
+      "Targets wrinkles with clinical-grade wavelengths",
     ],
     cons: [
-      "Corded design can be inconvenient",
-      "Accompanying app has limited features",
+      "Lacks blue light for acne treatment",
+      "Head strap can slip on smaller head shapes",
     ],
     description:
-      "CurrentBody's LED mask delivers near-identical clinical wavelengths to devices costing twice as much. The flexible silicone construction conforms to every face shape, ensuring maximum light penetration exactly where it matters most.",
-    affiliateLink:
-      "https://www.amazon.com/s?k=CurrentBody+Skin+LED+Light+Therapy+Mask",
+      "The HigherDOSE mask offers the perfect balance of premium performance and comfort. Constructed from medical-grade silicone, it wraps perfectly around the face to ensure maximum light penetration — while its cordless design makes it the ideal luxury companion for home use or travel.",
+    bottomLine:
+      "The Bottom Line: For those who want high-end anti-aging results without being tethered to a wall, this cordless, travel-friendly mask is a flawless choice.",
+    affiliateLink: "https://www.amazon.com/s?k=HigherDOSE+Red+Light+Face+Mask",
   },
   {
     id: "lightstim-wrinkles",
@@ -172,12 +166,8 @@ const products: Product[] = [
     award: "Best for Beginners",
     awardBg: "bg-sky-600",
     awardText: "text-white",
-    price: 249,
-    priceDisplay: "$249",
-    image:
-      "https://placehold.co/800x600/f0f9ff/9ca3af?text=LightStim+for+Wrinkles",
-    thumbnailImage:
-      "https://placehold.co/200x200/f0f9ff/9ca3af?text=LightStim",
+    image: "https://placehold.co/800x600/f0f9ff/9ca3af?text=LightStim+for+Wrinkles",
+    thumbnailImage: "https://placehold.co/200x200/f0f9ff/9ca3af?text=LightStim",
     rating: 4.5,
     reviewCount: 4210,
     treatmentTime: "3 min / area",
@@ -187,62 +177,62 @@ const products: Product[] = [
     keySpecs: [
       "Proprietary MultiWave Technology (4 wavelengths)",
       "FDA-cleared for wrinkle reduction",
-      "3-minute targeted treatment per area",
+      "Targeted 3-minute treatment per area",
       "No goggles required — fully eye-safe",
       "Best-in-class 2-year manufacturer warranty",
     ],
     pros: [
-      "Most accessible entry-level price",
-      "FDA-cleared for wrinkle treatment",
+      "Most accessible entry-level luxury price",
       "No goggles required for safe use",
       "Best-in-class 2-year warranty",
+      "FDA-cleared for wrinkle treatment",
     ],
     cons: [
       "Handheld device requires manual movement",
-      "Full-face treatment takes longer",
+      "Full-face treatment takes longer than a mask",
     ],
     description:
-      "LightStim's FDA-cleared handheld LED device uses exclusive MultiWave Technology — simultaneously emitting four wavelengths to maximise collagen production and smooth fine lines. The perfect entry-level device for LED beginners who want clinically validated results.",
+      "LightStim's FDA-cleared handheld LED device uses exclusive MultiWave Technology to simultaneously emit multiple wavelengths, maximising collagen production and smoothing fine lines. It's the perfect entry-level device for LED beginners who want clinically validated results without a full-face mask commitment.",
+    bottomLine:
+      "The Bottom Line: If you are new to LED therapy and want to target specific problem areas like crow's feet or laugh lines, this handheld device is a safe, proven starting point.",
     affiliateLink: "https://www.amazon.com/s?k=LightStim+for+Wrinkles",
   },
   {
-    id: "joovv-solo",
-    name: "Joovv Solo 3.0",
-    brand: "Joovv",
-    award: "Best Premium",
+    id: "qure-q-rejuvalight",
+    name: "Qure Skincare Q-Rejuvalight Pro Facewear",
+    brand: "Qure Skincare",
+    award: "Best Customizable",
     awardBg: "bg-rose-600",
     awardText: "text-white",
-    price: 599,
-    priceDisplay: "$599",
-    image: "https://placehold.co/800x600/fff1f2/9ca3af?text=Joovv+Solo+3.0",
-    thumbnailImage:
-      "https://placehold.co/200x200/fff1f2/9ca3af?text=Joovv",
-    rating: 4.8,
-    reviewCount: 892,
-    treatmentTime: "10 min",
-    wavelengths: "660nm + 850nm",
-    fdaStatus: "FDA-Registered",
-    warranty: "2 Years",
+    image: "https://placehold.co/800x600/fff1f2/9ca3af?text=Qure+Q-Rejuvalight",
+    thumbnailImage: "https://placehold.co/200x200/fff1f2/9ca3af?text=Qure",
+    rating: 4.7,
+    reviewCount: 876,
+    treatmentTime: "3 min",
+    wavelengths: "5 wavelengths",
+    fdaStatus: "FDA-Cleared",
+    warranty: "1 Year",
     keySpecs: [
-      "660nm Red + 850nm Near-Infrared at medical-grade power",
-      "Third-party tested and verified irradiance data",
-      "Modular system — expandable to full-body panels",
-      "10-minute hands-free treatment",
-      "Industry-leading 2-year warranty",
+      "5 clinical LED wavelengths",
+      "App-controlled customizable treatment zones",
+      "Just 3-minute daily sessions",
+      "FDA-cleared for at-home use",
+      "Treats multiple skin concerns simultaneously",
     ],
     pros: [
-      "Highest irradiance output (medical-grade)",
-      "Third-party verified performance data",
-      "Expandable to a full-body panel system",
-      "Industry-leading 2-year warranty",
+      "Treat acne on chin and wrinkles on forehead simultaneously",
+      "Ultra-fast 3-minute daily sessions",
+      "Excellent app integration for personalized plans",
+      "FDA-cleared across 5 wavelengths",
     ],
     cons: [
-      "Significant investment ($599+)",
-      "Large panel footprint requires dedicated space",
+      "Hard shell isn't as comfortable as silicone options",
     ],
     description:
-      "Joovv Solo 3.0 represents the pinnacle of at-home red light therapy. Unlike competitors, Joovv publishes third-party verified irradiance data, proving their clinical-grade power output. Ideal for beauty enthusiasts who refuse to compromise on results.",
-    affiliateLink: "https://www.amazon.com/s?k=Joovv+Solo+3.0",
+      "The Qure mask brings the dermatologist clinic to your phone. It's the first customizable LED mask that allows you to treat different facial zones with different light therapies simultaneously via its companion app — making it the smartest, most personalized at-home LED device on the market.",
+    bottomLine:
+      "The Bottom Line: If you have combination skin and want a smart, personalized treatment that targets wrinkles and breakouts simultaneously, this app-connected mask is unparalleled.",
+    affiliateLink: "https://www.amazon.com/s?k=Qure+Skincare+Q-Rejuvalight+Pro",
   },
 ]
 
@@ -251,13 +241,13 @@ const topPicks = products.slice(0, 4)
 
 // ─── Comparison Table Features ────────────────────────────────────────────────
 
-type ComparisonKey = "wavelengths" | "treatmentTime" | "fdaStatus" | "priceDisplay" | "warranty"
+type ComparisonKey = "wavelengths" | "treatmentTime" | "fdaStatus" | "warranty"
 
-const comparisonFeatures: { label: string; key: ComparisonKey }[] = [
+const comparisonFeatures: { label: string; key: ComparisonKey | "price" }[] = [
   { label: "LED Wavelengths", key: "wavelengths" },
   { label: "Treatment Time", key: "treatmentTime" },
   { label: "FDA Status", key: "fdaStatus" },
-  { label: "Price", key: "priceDisplay" },
+  { label: "Price", key: "price" },
   { label: "Warranty", key: "warranty" },
 ]
 
@@ -279,8 +269,6 @@ const jsonLdSchema = {
       brand: { "@type": "Brand", name: p.brand },
       offers: {
         "@type": "Offer",
-        price: p.price.toString(),
-        priceCurrency: "USD",
         url: p.affiliateLink,
         availability: "https://schema.org/InStock",
       },
@@ -292,6 +280,12 @@ const jsonLdSchema = {
       },
     },
   })),
+}
+
+// ─── Dynamic Date ─────────────────────────────────────────────────────────────
+
+function getCurrentMonthYear(): string {
+  return new Date().toLocaleDateString("en-US", { month: "long", year: "numeric" })
 }
 
 // ─── Star Rating Component ────────────────────────────────────────────────────
@@ -405,7 +399,7 @@ export default function Home() {
 
       <main className="max-w-5xl mx-auto px-4 py-10">
         {/* ── Hero Section ───────────────────────────────────────── */}
-        <section className="mb-14">
+        <section className="mb-16">
           {/* Breadcrumb */}
           <nav
             aria-label="Breadcrumb"
@@ -429,7 +423,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-white border border-gray-200 px-3 py-1.5 rounded-full shadow-sm">
               <Clock className="w-3 h-3 text-slate-400" />
-              Updated April 2025
+              Updated {getCurrentMonthYear()}
             </span>
             <span className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-white border border-gray-200 px-3 py-1.5 rounded-full shadow-sm">
               <BadgeCheck className="w-3 h-3 text-emerald-500" />
@@ -452,7 +446,7 @@ export default function Home() {
         </section>
 
         {/* ── At A Glance ─────────────────────────────────────────── */}
-        <section id="top-picks" className="mb-16 scroll-mt-20">
+        <section id="top-picks" className="mb-20 scroll-mt-20">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">
             At A Glance: Our Top Picks
           </h2>
@@ -484,9 +478,9 @@ export default function Home() {
                 <p className="text-sm font-semibold text-slate-800 leading-snug mb-1 flex-1">
                   {product.name}
                 </p>
-                <p className="text-base font-bold text-slate-900 mb-3">
-                  {product.priceDisplay}
-                </p>
+                <span className="block text-xs text-slate-500 mb-3">
+                  Check current price &amp; deals
+                </span>
 
                 {/* CTA */}
                 <a
@@ -495,7 +489,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="w-full bg-slate-900 text-white text-xs font-semibold px-3 py-2 rounded-lg flex items-center justify-center gap-1.5 hover:-translate-y-0.5 hover:bg-slate-800 transition-all duration-200"
                 >
-                  Check Price
+                  Check Price on Amazon
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
@@ -504,7 +498,7 @@ export default function Home() {
         </section>
 
         {/* ── Deep-Dive Product Cards ──────────────────────────────── */}
-        <section id="reviews" className="mb-16 scroll-mt-20">
+        <section id="reviews" className="mb-20 scroll-mt-20">
           <h2 className="text-2xl font-bold text-slate-900 mb-8">
             In-Depth Reviews
           </h2>
@@ -535,7 +529,7 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row gap-8">
                     {/* Left — Image + Price + CTA */}
                     <div className="w-full md:w-72 flex-shrink-0">
-                      <div className="aspect-[4/3] rounded-xl overflow-hidden bg-stone-100">
+                      <div className="h-48 md:h-auto md:aspect-[4/3] rounded-xl overflow-hidden bg-stone-100">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={product.image}
@@ -552,9 +546,9 @@ export default function Home() {
                       </div>
 
                       <div className="mt-4">
-                        <p className="text-2xl font-bold text-slate-900 mb-3">
-                          {product.priceDisplay}
-                        </p>
+                        <span className="block text-sm text-slate-500 mb-2">
+                          Check current price &amp; deals
+                        </span>
                         <a
                           href={product.affiliateLink}
                           target="_blank"
@@ -576,8 +570,11 @@ export default function Home() {
                       <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 leading-tight mb-3">
                         {product.name}
                       </h2>
-                      <p className="text-slate-600 leading-relaxed mb-6">
+                      <p className="text-slate-600 leading-relaxed mb-3">
                         {product.description}
+                      </p>
+                      <p className="font-semibold text-slate-900 mb-6">
+                        {product.bottomLine}
                       </p>
 
                       {/* Key Specs */}
@@ -601,7 +598,7 @@ export default function Home() {
                       {/* Pros & Cons */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {/* Pros */}
-                        <div className="bg-emerald-50 rounded-xl p-4">
+                        <div className="bg-white border border-gray-200 rounded-xl p-4">
                           <h4 className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                             <CheckCircle2 className="w-3.5 h-3.5" />
                             Pros
@@ -610,7 +607,7 @@ export default function Home() {
                             {product.pros.map((pro, i) => (
                               <li
                                 key={i}
-                                className="flex items-start gap-2 text-sm text-emerald-800"
+                                className="flex items-start gap-2 text-sm text-slate-700"
                               >
                                 <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
                                 {pro}
@@ -620,7 +617,7 @@ export default function Home() {
                         </div>
 
                         {/* Cons */}
-                        <div className="bg-red-50 rounded-xl p-4">
+                        <div className="bg-white border border-gray-200 rounded-xl p-4">
                           <h4 className="text-xs font-bold text-red-700 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                             <XCircle className="w-3.5 h-3.5" />
                             Cons
@@ -629,7 +626,7 @@ export default function Home() {
                             {product.cons.map((con, i) => (
                               <li
                                 key={i}
-                                className="flex items-start gap-2 text-sm text-red-800"
+                                className="flex items-start gap-2 text-sm text-slate-700"
                               >
                                 <XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
                                 {con}
@@ -643,6 +640,37 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* ── About Our Testing Process & Experts ─────────────────── */}
+        <section className="mb-16 scroll-mt-20">
+          <div className="bg-white border border-gray-200 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">
+              About Our Testing Process &amp; Experts
+            </h2>
+            <div className="flex flex-col sm:flex-row items-start gap-6">
+              {/* Avatar */}
+              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-bold text-xl">
+                BT
+              </div>
+              <div>
+                <p className="font-semibold text-slate-900 text-lg mb-1">
+                  The Beauty Tech Review Team
+                </p>
+                <p className="text-sm text-slate-500 mb-3">
+                  Skincare Device Specialists
+                </p>
+                <p className="text-slate-600 leading-relaxed text-sm">
+                  With over 10 years of hands-on skincare device testing, our team of
+                  beauty technology specialists and licensed estheticians has evaluated
+                  hundreds of at-home devices. We work closely with board-certified
+                  dermatologists to assess clinical efficacy, safety, and real-world
+                  usability—so every recommendation you read is grounded in rigorous,
+                  expert-led analysis.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -690,12 +718,17 @@ export default function Home() {
                         key={p.id}
                         className="py-3.5 px-4 text-center text-slate-600"
                       >
-                        {feature.key === "priceDisplay" ? (
-                          <span className="font-bold text-slate-900">
-                            {p[feature.key]}
-                          </span>
+                        {feature.key === "price" ? (
+                          <a
+                            href={p.affiliateLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm font-semibold text-amber-600 hover:text-amber-700 underline underline-offset-2 transition-colors"
+                          >
+                            Check Price
+                          </a>
                         ) : (
-                          String(p[feature.key])
+                          String(p[feature.key as ComparisonKey])
                         )}
                       </td>
                     ))}
@@ -732,8 +765,9 @@ export default function Home() {
             This article contains affiliate links. If you purchase through these
             links, Luxury Beauty may earn a commission at no additional cost to
             you. Our reviews are independently researched and reflect genuine
-            expert opinions. We are not responsible for the accuracy of third‑party
-            pricing.
+            expert opinions.{" "}
+            <strong className="text-slate-600">As an Amazon Associate, we earn from qualifying purchases.</strong>{" "}
+            Prices and availability are subject to change.
           </p>
         </div>
       </footer>
@@ -755,9 +789,6 @@ export default function Home() {
                 {activeProduct.name}
               </p>
             </div>
-            <p className="flex-shrink-0 text-base font-bold text-slate-900">
-              {activeProduct.priceDisplay}
-            </p>
             <a
               href={activeProduct.affiliateLink}
               target="_blank"
