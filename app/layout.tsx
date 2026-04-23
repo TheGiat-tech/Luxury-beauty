@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
+import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
   title: "Best LED Face Masks of 2025 | Expert-Tested Reviews | Luxury Beauty",
@@ -32,7 +33,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
