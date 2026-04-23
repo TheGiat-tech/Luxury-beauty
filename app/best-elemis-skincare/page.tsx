@@ -206,7 +206,7 @@ export default function BestElemsSkincorePage() {
         <div className="max-w-6xl mx-auto px-6 pt-6 pb-4">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-stone-500 mb-10">
-            <Link href="/" className="hover:text-stone-300 transition-colors">Home</Link>
+            <Link href="/" aria-label="Navigate to homepage" className="hover:text-stone-300 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             <span className="text-stone-500">Brands</span>
             <ChevronRight className="w-3 h-3" />
@@ -312,13 +312,13 @@ export default function BestElemsSkincorePage() {
               {/* Edition Label */}
               <div className="flex items-center gap-4 mb-6">
                 <span className="font-display text-xs font-bold tracking-[0.3em] uppercase text-stone-400">
-                  No.&thinsp;{product.edition}
+                  No. {product.edition}
                 </span>
                 <div className="flex-1 h-px bg-stone-200" />
               </div>
 
               {/* Card */}
-              <div className={`grid grid-cols-1 md:grid-cols-2 gap-0 bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm ${index % 2 === 1 ? "md:[grid-template-columns:1fr_1fr]" : ""}`}>
+              <div className={`grid grid-cols-1 md:grid-cols-2 gap-0 bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm`}>
 
                 {/* Image Column */}
                 <div className={`relative bg-stone-100 ${index % 2 === 1 ? "md:order-2" : ""}`}>
