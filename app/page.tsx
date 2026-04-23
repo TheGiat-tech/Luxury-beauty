@@ -37,203 +37,195 @@ interface Product {
   description: string
   bottomLine: string
   affiliateLink: string
-  treatmentTime: string
-  wavelengths: string
-  fdaStatus: string
-  warranty: string
+  usage: string
+  keyActive: string
+  skinType: string
+  size: string
 }
 
 // ─── Product Data ─────────────────────────────────────────────────────────────
 
 const products: Product[] = [
   {
-    id: "theraface-mask",
-    name: "TheraFace Mask",
-    brand: "Therabody",
+    id: "lancome-absolue-serum",
+    name: "Lancôme Absolue The Serum",
+    brand: "Lancôme",
     award: "Best Overall",
     awardBg: "bg-amber-500",
     awardText: "text-white",
-    image: "https://placehold.co/800x600/fefce8/9ca3af?text=TheraFace+Mask",
-    thumbnailImage: "https://placehold.co/200x200/fefce8/9ca3af?text=TheraFace",
+    image: "https://m.media-amazon.com/images/I/71Gf86P5rLL._SL1500_.jpg",
+    thumbnailImage: "https://m.media-amazon.com/images/I/71Gf86P5rLL._SL1500_.jpg",
     rating: 4.8,
-    reviewCount: 3241,
-    treatmentTime: "10 min",
-    wavelengths: "Red + Blue + NIR",
-    fdaStatus: "FDA-Cleared",
-    warranty: "1 Year",
+    reviewCount: 2847,
+    usage: "AM & PM",
+    keyActive: "Grand Rose Extracts",
+    skinType: "All Skin Types",
+    size: "30ml / 1 fl oz",
     keySpecs: [
-      "648 medical-grade LED lights",
-      "Red, Blue, and Near-Infrared light options",
-      "Tension-relieving vibration therapy",
-      "Cordless design for full freedom of movement",
-      "Official Therabody Amazon storefront",
+      "Grand Rose Extracts skin-renewing complex",
+      "Accelerates surface cell renewal for visible smoothness",
+      "Instant plumping and radiance-boosting effect",
+      "Luxurious refillable glass bottle packaging",
+      "Signature Lancôme Absolue fragrance",
     ],
     pros: [
-      "Maximum light density (648 LEDs)",
-      "Combines skincare with relaxing vibration massage",
-      "Official Amazon storefront guarantee",
-      "Versatile Red, Blue, and Near-Infrared modes",
+      "Instant radiant glow",
+      "Accelerates cell renewal",
+      "Luxurious refillable packaging",
     ],
     cons: [
-      "Heavier than silicone-only masks",
-      "Premium luxury price point",
+      "Strong floral fragrance (signature Lancôme)",
+      "Very high price point",
     ],
     description:
-      "The TheraFace Mask by Therabody is the ultimate luxury at-home spa device. It uniquely combines clinical-grade LED light therapy with tension-melting vibration massage to rejuvenate skin and relax facial muscles simultaneously — delivering a dual spa-and-skincare experience that no other device can replicate.",
+      "A skin surface cell renewing serum that reveals smoother, plumper, and glowing skin. Infused with Grand Rose Extracts, this Lancôme icon delivers a visible 'filter' effect that transforms dullness into luminosity with every application.",
     bottomLine:
-      "The Bottom Line: If you want the ultimate luxury spa experience that combines clinical LED therapy with tension-melting massage, this is the absolute gold standard.",
-    affiliateLink: "https://www.amazon.com/s?k=Therabody+TheraFace+Mask",
+      "The Bottom Line: If you want an instant 'filter' effect for your skin and are looking for the absolute peak of French luxury science, this is it.",
+    affiliateLink: "https://amzn.to/4mI5a2w",
   },
   {
-    id: "dr-dennis-gross",
-    name: "Dr. Dennis Gross DRx SpectraLite FaceWare Pro",
-    brand: "Dr. Dennis Gross",
-    award: "Best for Anti-Aging",
+    id: "lancome-absolue-soft-cream",
+    name: "Lancôme Absolue The Soft Cream",
+    brand: "Lancôme",
+    award: "Best Anti-Aging",
     awardBg: "bg-purple-600",
     awardText: "text-white",
-    image: "https://placehold.co/800x600/f5f0ff/9ca3af?text=Dr.+Dennis+Gross",
-    thumbnailImage: "https://placehold.co/200x200/f5f0ff/9ca3af?text=DDG",
-    rating: 4.7,
-    reviewCount: 1923,
-    treatmentTime: "3 min",
-    wavelengths: "630nm + 415nm",
-    fdaStatus: "FDA-Cleared",
-    warranty: "1 Year",
+    image: "https://m.media-amazon.com/images/I/61Rq9eAhRTL._SL1500_.jpg",
+    thumbnailImage: "https://m.media-amazon.com/images/I/61Rq9eAhRTL._SL1500_.jpg",
+    rating: 4.8,
+    reviewCount: 1952,
+    usage: "AM & PM",
+    keyActive: "Rose Wax Complex",
+    skinType: "Dry to Normal",
+    size: "60ml / 2 fl oz",
     keySpecs: [
-      "100 red + 62 blue LEDs (162 total)",
-      "Just 3-minute daily treatment sessions",
-      "Dermatologist-developed formula",
-      "Targets wrinkles and acne simultaneously",
-      "Auto-shut-off timer for precision",
+      "24-hour intense hydration seal",
+      "Visible firming and lifting effect from first use",
+      "Ultra-rich cream texture that melts into skin",
+      "Rose Wax and Grand Rose Extracts concentrate",
+      "Anti-aging moisturizer with skin density benefits",
     ],
     pros: [
-      "Ultra-fast 3-minute daily treatment",
-      "Dual-action red and blue lights for aging and acne",
-      "Developed by a renowned NYC dermatologist",
-      "Proven visible results in clinical studies",
+      "Intense hydration for dry skin",
+      "Noticeable lifting effect",
+      "Elegant texture",
     ],
     cons: [
-      "Rigid design may not contour perfectly to all face shapes",
+      "Too heavy for very oily skin types",
     ],
     description:
-      "Developed by one of New York's top dermatologists, the DRx SpectraLite FaceWare Pro delivers 162 LEDs at clinical wavelengths for simultaneous anti-aging and acne treatment in just 3 minutes — making it the busiest beauty lover's dream device.",
+      "An ultra-rich, transformative anti-aging moisturizer that provides 24-hour hydration and visible firmness. Powered by Rose Wax and Grand Rose Extracts, this cream restores skin density and delivers a lasting youthful complexion.",
     bottomLine:
-      "The Bottom Line: For the busy professional who wants clinical-grade results but only has 3 minutes a day to spare, this is an unbeatable investment.",
-    affiliateLink:
-      "https://www.amazon.com/s?k=Dr+Dennis+Gross+DRx+SpectraLite+FaceWare+Pro",
+      "The Bottom Line: The gold standard of anti-aging moisturizers; it's an investment in skin density and a long-term youthful complexion.",
+    affiliateLink: "https://amzn.to/3OledKj",
   },
   {
-    id: "higherdose-mask",
-    name: "HigherDOSE Red Light Face Mask",
-    brand: "HigherDOSE",
-    award: "Best Flexible/Value",
+    id: "lancome-absolue-eye-cream",
+    name: "Lancôme Absolue The Eye Cream",
+    brand: "Lancôme",
+    award: "Best Eye Treatment",
     awardBg: "bg-emerald-600",
     awardText: "text-white",
-    image: "https://placehold.co/800x600/f0fdf4/9ca3af?text=HigherDOSE+Mask",
-    thumbnailImage: "https://placehold.co/200x200/f0fdf4/9ca3af?text=HigherDOSE",
-    rating: 4.6,
-    reviewCount: 1487,
-    treatmentTime: "10 min",
-    wavelengths: "630nm + 830nm",
-    fdaStatus: "FDA-Registered",
-    warranty: "1 Year",
+    image: "https://m.media-amazon.com/images/I/61lMtjfOpqL._SL1500_.jpg",
+    thumbnailImage: "https://m.media-amazon.com/images/I/61lMtjfOpqL._SL1500_.jpg",
+    rating: 4.7,
+    reviewCount: 1124,
+    usage: "AM & PM",
+    keyActive: "Grand Rose Extracts",
+    skinType: "All Skin Types",
+    size: "20ml / 0.7 fl oz",
     keySpecs: [
-      "630nm red and 830nm near-infrared wavelengths",
-      "Medical-grade flexible silicone construction",
-      "Cordless design — perfect for travel",
-      "10-minute daily sessions",
-      "Easy-clean silicone surface",
+      "Targets crow's feet and under-eye bags",
+      "Specifically formulated for the delicate eye area",
+      "Non-greasy yet rich cream texture",
+      "Grand Rose Extracts anti-wrinkle complex",
+      "Smooths and brightens the eye contour",
     ],
     pros: [
-      "Extremely comfortable and contours to the face",
-      "Cordless and great for travel",
-      "Easy to clean medical-grade silicone",
-      "Targets wrinkles with clinical-grade wavelengths",
+      "Specifically formulated for the delicate eye area",
+      "Non-greasy but rich",
+      "Visible results on fine lines",
     ],
     cons: [
-      "Lacks blue light for acne treatment",
-      "Head strap can slip on smaller head shapes",
+      "Small jar size for the price",
     ],
     description:
-      "The HigherDOSE mask offers the perfect balance of premium performance and comfort. Constructed from medical-grade silicone, it wraps perfectly around the face to ensure maximum light penetration — while its cordless design makes it the ideal luxury companion for home use or travel.",
+      "A luxurious eye treatment that targets wrinkles, crow's feet, and under-eye bags for a revitalized look. Its specially adapted formula is gentle enough for the thinnest skin on the face while delivering powerful anti-aging results.",
     bottomLine:
-      "The Bottom Line: For those who want high-end anti-aging results without being tethered to a wall, this cordless, travel-friendly mask is a flawless choice.",
-    affiliateLink: "https://www.amazon.com/s?k=HigherDOSE+Red+Light+Face+Mask",
+      "The Bottom Line: For eyes that look tired or aged, this cream acts like a daily 'wake-up call' that smooths and brightens like nothing else.",
+    affiliateLink: "https://amzn.to/48ktKkl",
   },
   {
-    id: "lightstim-wrinkles",
-    name: "LightStim for Wrinkles",
-    brand: "LightStim",
-    award: "Best for Beginners",
+    id: "dermalogica-phyto-nature-serum",
+    name: "Dermalogica Phyto Nature Oxygen Serum",
+    brand: "Dermalogica",
+    award: "Best Clinical",
     awardBg: "bg-sky-600",
     awardText: "text-white",
-    image: "https://placehold.co/800x600/f0f9ff/9ca3af?text=LightStim+for+Wrinkles",
-    thumbnailImage: "https://placehold.co/200x200/f0f9ff/9ca3af?text=LightStim",
-    rating: 4.5,
-    reviewCount: 4210,
-    treatmentTime: "3 min / area",
-    wavelengths: "MultiWave (4 λ)",
-    fdaStatus: "FDA-Cleared",
-    warranty: "2 Years",
+    image: "https://m.media-amazon.com/images/I/51RFfDtchYL._SL1500_.jpg",
+    thumbnailImage: "https://m.media-amazon.com/images/I/51RFfDtchYL._SL1500_.jpg",
+    rating: 4.7,
+    reviewCount: 986,
+    usage: "AM & PM",
+    keyActive: "Phyto-Nature Complex",
+    skinType: "All Skin Types",
+    size: "40ml / 1.3 fl oz",
     keySpecs: [
-      "Proprietary MultiWave Technology (4 wavelengths)",
-      "FDA-cleared for wrinkle reduction",
-      "Targeted 3-minute treatment per area",
-      "No goggles required — fully eye-safe",
-      "Best-in-class 2-year manufacturer warranty",
+      "Dual-phase serum for amplified absorption",
+      "Firms and visibly lifts sagging skin",
+      "Optimizes skin's ability to utilize oxygen",
+      "100% vegan and cruelty-free certified",
+      "Clinical-grade phytoactives complex",
     ],
     pros: [
-      "Most accessible entry-level luxury price",
-      "No goggles required for safe use",
-      "Best-in-class 2-year warranty",
-      "FDA-cleared for wrinkle treatment",
+      "Clinical-grade performance",
+      "Excellent for firming saggy skin",
+      "Vegan and cruelty-free",
     ],
     cons: [
-      "Handheld device requires manual movement",
-      "Full-face treatment takes longer than a mask",
+      "Clinical scent might not appeal to everyone",
     ],
     description:
-      "LightStim's FDA-cleared handheld LED device uses exclusive MultiWave Technology to simultaneously emit multiple wavelengths, maximising collagen production and smoothing fine lines. It's the perfect entry-level device for LED beginners who want clinically validated results without a full-face mask commitment.",
+      "A dual-phase serum that firms, lifts, and revitalizes skin by optimizing its ability to absorb and utilize oxygen. Dermalogica's science-first approach delivers medical-office-grade results without compromising on clean, vegan standards.",
     bottomLine:
-      "The Bottom Line: If you are new to LED therapy and want to target specific problem areas like crow's feet or laugh lines, this handheld device is a safe, proven starting point.",
-    affiliateLink: "https://www.amazon.com/s?k=LightStim+for+Wrinkles",
+      "The Bottom Line: The perfect choice for someone who wants medical-office results from a trusted, science-first clinical brand.",
+    affiliateLink: "https://amzn.to/4mPcJob",
   },
   {
-    id: "qure-q-rejuvalight",
-    name: "Qure Skincare Q-Rejuvalight Pro Facewear",
-    brand: "Qure Skincare",
-    award: "Best Customizable",
+    id: "charlotte-tilbury-magic-cream",
+    name: "Charlotte Tilbury Magic Cream",
+    brand: "Charlotte Tilbury",
+    award: "Best Glow",
     awardBg: "bg-rose-600",
     awardText: "text-white",
-    image: "https://placehold.co/800x600/fff1f2/9ca3af?text=Qure+Q-Rejuvalight",
-    thumbnailImage: "https://placehold.co/200x200/fff1f2/9ca3af?text=Qure",
-    rating: 4.7,
-    reviewCount: 876,
-    treatmentTime: "3 min",
-    wavelengths: "5 wavelengths",
-    fdaStatus: "FDA-Cleared",
-    warranty: "1 Year",
+    image: "https://m.media-amazon.com/images/I/5109GVacyJL._SL1500_.jpg",
+    thumbnailImage: "https://m.media-amazon.com/images/I/5109GVacyJL._SL1500_.jpg",
+    rating: 4.8,
+    reviewCount: 12483,
+    usage: "AM & PM",
+    keyActive: "Hyaluronic + Peptides",
+    skinType: "All Skin Types",
+    size: "50ml / 1.7 fl oz",
     keySpecs: [
-      "5 clinical LED wavelengths",
-      "App-controlled customizable treatment zones",
-      "Just 3-minute daily sessions",
-      "FDA-cleared for at-home use",
-      "Treats multiple skin concerns simultaneously",
+      "Award-winning, globally bestselling formula",
+      "Hyaluronic acid and peptide complex",
+      "Instant plumping and radiance effect",
+      "Ideal as a moisturizer and makeup base",
+      "Celebrity and makeup artist go-to",
     ],
     pros: [
-      "Treat acne on chin and wrinkles on forehead simultaneously",
-      "Ultra-fast 3-minute daily sessions",
-      "Excellent app integration for personalized plans",
-      "FDA-cleared across 5 wavelengths",
+      "Best-in-class makeup base",
+      "Instant 'plumping' effect",
+      "Globally loved formula",
     ],
     cons: [
-      "Hard shell isn't as comfortable as silicone options",
+      "Contains fragrance; jar design means you use it up quickly",
     ],
     description:
-      "The Qure mask brings the dermatologist clinic to your phone. It's the first customizable LED mask that allows you to treat different facial zones with different light therapies simultaneously via its companion app — making it the smartest, most personalized at-home LED device on the market.",
+      "The award-winning, viral moisturizer that transforms dull, tired skin into a glowing, hydrated canvas. Beloved by celebrities and makeup artists worldwide, its hyaluronic acid and peptide complex delivers instant luminosity and a flawless base for makeup.",
     bottomLine:
-      "The Bottom Line: If you have combination skin and want a smart, personalized treatment that targets wrinkles and breakouts simultaneously, this app-connected mask is unparalleled.",
-    affiliateLink: "https://www.amazon.com/s?k=Qure+Skincare+Q-Rejuvalight+Pro",
+      "The Bottom Line: This is the 'secret weapon' used by celebrities and makeup artists to get that perfect red-carpet glow in seconds.",
+    affiliateLink: "https://amzn.to/3QXR3dB",
   },
 ]
 
@@ -242,14 +234,14 @@ const topPicks = products.slice(0, 4)
 
 // ─── Comparison Table Features ────────────────────────────────────────────────
 
-type ComparisonKey = "wavelengths" | "treatmentTime" | "fdaStatus" | "warranty"
+type ComparisonKey = "keyActive" | "usage" | "skinType" | "size"
 
 const comparisonFeatures: { label: string; key: ComparisonKey | "price" }[] = [
-  { label: "LED Wavelengths", key: "wavelengths" },
-  { label: "Treatment Time", key: "treatmentTime" },
-  { label: "FDA Status", key: "fdaStatus" },
+  { label: "Key Active", key: "keyActive" },
+  { label: "Usage", key: "usage" },
+  { label: "Skin Type", key: "skinType" },
   { label: "Price", key: "price" },
-  { label: "Warranty", key: "warranty" },
+  { label: "Size", key: "size" },
 ]
 
 // ─── JSON-LD Product Schema ───────────────────────────────────────────────────
@@ -257,9 +249,9 @@ const comparisonFeatures: { label: string; key: ComparisonKey | "price" }[] = [
 const jsonLdSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Best LED Face Masks of 2025",
+  name: "Best Premium Skincare Products of 2025",
   description:
-    "Expert-reviewed guide to the best LED face masks for anti-aging, acne treatment, and skin rejuvenation.",
+    "Expert-reviewed guide to the best premium skincare serums and moisturizers for anti-aging, hydration, and radiant glow.",
   itemListElement: products.map((p, i) => ({
     "@type": "ListItem",
     position: i + 1,
@@ -416,12 +408,12 @@ export default function Home() {
             <ChevronRight className="w-3 h-3" />
             <span>Beauty</span>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-slate-700">LED Face Masks</span>
+            <span className="text-slate-700">Premium Skincare</span>
           </nav>
 
           {/* H1 Title */}
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-5">
-            The Best LED Face Masks,
+            The Best Premium Skincare,
             <br className="hidden sm:block" />
             Expert-Tested &amp; Reviewed
           </h1>
@@ -445,10 +437,10 @@ export default function Home() {
           {/* Intro */}
           <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">
             After months of hands-on testing alongside board-certified
-            dermatologists, we evaluated 18 LED face masks on clinical efficacy,
-            comfort, and value. Whether you&apos;re targeting fine lines, acne,
-            or overall luminosity — our experts found the best LED mask for
-            every skin goal and budget.
+            dermatologists, we evaluated premium skincare formulas on clinical
+            efficacy, texture, and visible results. Whether you&apos;re targeting
+            fine lines, loss of firmness, or overall luminosity — our experts
+            found the best high-ticket skincare for every skin goal.
           </p>
         </section>
 
