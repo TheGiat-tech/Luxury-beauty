@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Top Picks", href: "/#top-picks" },
   { label: "Reviews", href: "/#reviews" },
   { label: "Compare", href: "/#comparison" },
+  { label: "ELEMIS", href: "/best-elemis-skincare" },
   { label: "The Science", href: "/blog/how-red-light-therapy-works" },
   { label: "Ingredients", href: "/blog/luxury-ingredients-science" },
 ]
