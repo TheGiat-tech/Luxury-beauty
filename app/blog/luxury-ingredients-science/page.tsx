@@ -16,7 +16,8 @@ export const metadata: Metadata = {
 
 export default function LuxuryIngredientsScience() {
   return (
-    <main className="max-w-3xl mx-auto py-16 px-4">
+    <main>
+    <div className="max-w-3xl mx-auto py-16 px-4">
       {/* Article Header */}
       <header className="mb-12">
         <Breadcrumb />
@@ -228,19 +229,92 @@ export default function LuxuryIngredientsScience() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="/best-luxury-skincare"
+            href="/"
             className="inline-block bg-slate-900 text-white text-sm font-semibold px-7 py-3 rounded-full hover:bg-slate-700 transition-colors duration-200 text-center"
           >
             Best Luxury Skincare Guide →
           </Link>
           <Link
-            href="/brand-guides/elemis"
+            href="/best-elemis-skincare"
             className="inline-block border border-slate-900 text-slate-900 text-sm font-semibold px-7 py-3 rounded-full hover:bg-slate-100 transition-colors duration-200 text-center"
           >
             ELEMIS Brand Guide →
           </Link>
         </div>
       </div>
+    </div>
+
+      {/* Executive Call to Action */}
+      <section className="w-full bg-stone-50 border-t border-b border-gray-200">
+        <div className="max-w-3xl mx-auto py-16 px-6">
+          <h2
+            className="text-3xl font-bold text-slate-900 mb-6"
+            style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+          >
+            Ready to Invest in Your Skin&apos;s Future?
+          </h2>
+
+          <blockquote className="border-l-2 border-rose-300 pl-5 my-6 italic text-slate-600 text-lg leading-relaxed">
+            &ldquo;The difference between a luxury price tag and a luxury result is the science
+            inside the bottle. Now that you know what to look for, it&apos;s time to choose the
+            formula that aligns with your skin goals.&rdquo;
+          </blockquote>
+
+          <p className="text-slate-600 leading-relaxed mb-10">
+            Our editorial team has spent months testing these high-performance formulas against
+            clinical benchmarks. If you&apos;re ready to move from understanding the science to
+            seeing the results, explore our curated guides below:
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {/* Block 1 */}
+            <div className="flex flex-col gap-3">
+              <h3
+                className="text-lg font-bold text-slate-900"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                The Gold Standard
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                Our definitive ranking of the top 5 luxury skincare investments for 2026. From
+                Lanc&ocirc;me&apos;s regenerative serums to clinical powerhouses.
+              </p>
+              <Link
+                href="/"
+                className="group inline-flex items-center gap-1 text-sm font-medium text-slate-900 underline underline-offset-4 decoration-slate-400 hover:decoration-slate-900 transition-colors duration-200 mt-1"
+              >
+                View the Best Luxury Skincare Guide{" "}
+                <span className="transition-transform duration-200 group-hover:translate-x-1">
+                  &rarr;
+                </span>
+              </Link>
+            </div>
+
+            {/* Block 2 */}
+            <div className="flex flex-col gap-3">
+              <h3
+                className="text-lg font-bold text-slate-900"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                The British Clinical Leader
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
+                A deep dive into ELEMIS—the B-Corp certified brand leading the world in
+                marine-based anti-aging technology.
+              </p>
+              <Link
+                href="/best-elemis-skincare"
+                className="group inline-flex items-center gap-1 text-sm font-medium text-slate-900 underline underline-offset-4 decoration-slate-400 hover:decoration-slate-900 transition-colors duration-200 mt-1"
+              >
+                Explore the ELEMIS Performance Collection{" "}
+                <span className="transition-transform duration-200 group-hover:translate-x-1">
+                  &rarr;
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

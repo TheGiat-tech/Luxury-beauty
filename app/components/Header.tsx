@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Reviews", href: "/#reviews" },
   { label: "Compare", href: "/#comparison" },
   { label: "The Science", href: "/blog/how-red-light-therapy-works" },
+  { label: "Ingredients", href: "/blog/luxury-ingredients-science" },
 ]
 
 export default function Header() {
