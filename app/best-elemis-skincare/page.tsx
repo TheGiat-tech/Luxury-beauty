@@ -10,7 +10,6 @@ import {
   Clock,
   ChevronRight,
   ShoppingBag,
-  Sparkles,
   ExternalLink,
   BadgeCheck,
   AlertCircle,
@@ -182,25 +181,6 @@ export default function BestElemsSkincorePage() {
       />
 
       {/* ── Sticky Header ──────────────────────────────────────── */}
-      <header className="bg-stone-900 border-b border-stone-700 sticky top-0 z-40">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <Sparkles className="w-5 h-5 text-amber-400 group-hover:text-amber-300 transition-colors" />
-            <span className="text-sm font-semibold tracking-[0.2em] uppercase text-stone-100 group-hover:text-white transition-colors">
-              Luxury Beauty
-            </span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-8 text-xs font-medium tracking-widest text-stone-400 uppercase">
-            <a href="#the-selection" className="hover:text-stone-100 transition-colors">
-              The Selection
-            </a>
-            <a href="#ingredient-spotlight" className="hover:text-stone-100 transition-colors">
-              Science
-            </a>
-          </nav>
-        </div>
-      </header>
-
       {/* ── Hero Section ───────────────────────────────────────────── */}
       <section className="bg-stone-900 text-white">
         <div className="max-w-6xl mx-auto px-6 pt-6 pb-4">

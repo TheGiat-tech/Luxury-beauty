@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import Script from "next/script"
 import Link from "next/link"
+import Breadcrumb from "../components/Breadcrumb"
 import {
   CheckCircle2,
   Star,
@@ -238,42 +239,9 @@ export default function SummerGlowReportPage() {
       />
 
       {/* ── Sticky Header ──────────────────────────────────────── */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-amber-500" />
-            <span className="text-sm font-semibold tracking-widest uppercase text-slate-900">
-              Luxury Beauty
-            </span>
-          </div>
-          <nav
-            className="hidden md:flex items-center gap-6 text-xs font-medium tracking-wide text-slate-500 uppercase"
-          >
-            <a href="#top-picks" className="hover:text-slate-900 transition-colors">
-              Top Picks
-            </a>
-            <a href="#reviews" className="hover:text-slate-900 transition-colors">
-              Reviews
-            </a>
-          </nav>
-        </div>
-      </header>
-
       <main className="max-w-5xl mx-auto px-4 py-10">
         {/* ── Hero Section ───────────────────────────────────────── */}
         <section className="mb-16">
-          {/* Breadcrumb */}
-          <nav
-            aria-label="Breadcrumb"
-            className="flex items-center gap-1.5 text-xs text-slate-400 mb-6"
-          >
-            <span>Home</span>
-            <ChevronRight className="w-3 h-3" />
-            <span>Beauty</span>
-            <ChevronRight className="w-3 h-3" />
-            <span className="text-slate-700">Summer Glow Report</span>
-          </nav>
-
           {/* Mandatory AD Disclosure */}
           <div className="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8">
             <AlertCircle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
@@ -284,6 +252,7 @@ export default function SummerGlowReportPage() {
           </div>
 
           {/* H1 Title */}
+          <Breadcrumb />
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-5">
             The 2026 Summer Glow Report: Why b.tan is the Secret to a Red-Carpet Tan
           </h1>
