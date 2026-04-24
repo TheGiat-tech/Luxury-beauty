@@ -358,50 +358,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
       />
 
-      {/* ── Sticky Header ──────────────────────────────────────── */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-amber-500" />
-            <span className="text-sm font-semibold tracking-widest uppercase text-slate-900">
-              Luxury Beauty
-            </span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6 text-xs font-medium tracking-wide text-slate-500 uppercase">
-            <a
-              href="#top-picks"
-              className="hover:text-slate-900 transition-colors"
-            >
-              Top Picks
-            </a>
-            <a
-              href="#reviews"
-              className="hover:text-slate-900 transition-colors"
-            >
-              Reviews
-            </a>
-            <a
-              href="#comparison"
-              className="hover:text-slate-900 transition-colors"
-            >
-              Compare
-            </a>
-            <Link
-              href="/blog/how-red-light-therapy-works"
-              className="hover:text-slate-900 transition-colors"
-            >
-              The Science
-            </Link>
-            <Link
-              href="/blog/luxury-ingredients-science"
-              className="hover:text-slate-900 transition-colors"
-            >
-              Ingredients
-            </Link>
-          </nav>
-        </div>
-      </header>
-
       <main className="max-w-5xl mx-auto px-4 py-10">
         {/* ── Hero Section ───────────────────────────────────────── */}
         <section className="mb-16">

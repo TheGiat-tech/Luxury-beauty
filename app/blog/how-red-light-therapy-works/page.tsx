@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Breadcrumb from "../../components/Breadcrumb"
 
 export const metadata: Metadata = {
   title: "How Does Red Light Therapy Actually Work for Anti-Aging? The Science Explained | Luxury Beauty",
@@ -18,6 +19,7 @@ export default function HowRedLightTherapyWorks() {
     <main className="max-w-3xl mx-auto py-16 px-4">
       {/* Article Header */}
       <header className="mb-12">
+        <Breadcrumb />
         <p
           className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-4"
         >
