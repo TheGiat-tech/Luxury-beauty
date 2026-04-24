@@ -16,6 +16,7 @@ import {
   Leaf,
   FlaskConical,
   TrendingUp,
+  ArrowRight,
 } from "lucide-react"
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -109,7 +110,16 @@ const products: Product[] = [
   },
 ]
 
-// ─── JSON-LD Product Schema ───────────────────────────────────────────────────
+// ─── Quick Selection Data ─────────────────────────────────────────────────────
+
+const quickSelection = [
+  { name: "Pro-Collagen Marine Cream", bestFor: "Anti-aging, dry skin", keyBenefit: "14-day wrinkle reduction", href: "#elemis-pro-collagen-marine-cream" },
+  { name: "Pro-Collagen Night Cream", bestFor: "Overnight renewal", keyBenefit: "Cellular regeneration during sleep", href: "#elemis-pro-collagen-night-cream" },
+  { name: "Pro-Collagen Marine Cream SPF 30", bestFor: "Daily UV protection", keyBenefit: "Anti-aging + broad-spectrum defense", href: "#elemis-pro-collagen-marine-cream-spf30" },
+  { name: "Pro-Collagen Future Restore Serum", bestFor: "Elasticity & firmness", keyBenefit: "Structural collagen restoration", href: "#elemis-pro-collagen-future-restore-serum" },
+]
+
+
 
 const jsonLdSchema = {
   "@context": "https://schema.org",
@@ -151,7 +161,7 @@ function StarRating() {
           <Star key={star} className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
         ))}
       </div>
-      <span className="text-sm font-semibold text-stone-700">5.0</span>
+      <span className="text-sm font-semibold text-stone-700">4.7</span>
       <span className="text-sm text-stone-400">on Amazon</span>
     </div>
   )
@@ -185,13 +195,22 @@ export default function BestElemsSkincorePage() {
       <section className="bg-stone-900 text-white">
         <div className="max-w-6xl mx-auto px-6 pt-6 pb-4">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-stone-500 mb-10">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs text-stone-500 mb-6">
             <Link href="/" aria-label="Navigate to homepage" className="hover:text-stone-300 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-stone-500">Brands</span>
+            <Link href="/" className="hover:text-stone-300 transition-colors">Brands</Link>
             <ChevronRight className="w-3 h-3" />
             <span className="text-stone-300">ELEMIS</span>
           </nav>
+
+          {/* Back to Premium Guide */}
+          <Link
+            href="/"
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-stone-400 hover:text-amber-400 hover:bg-stone-800 border border-transparent hover:border-stone-600 px-3 py-1.5 rounded-full transition-all duration-200 mb-8"
+          >
+            <ChevronRight className="w-3 h-3 rotate-180" />
+            Back to Premium Guide
+          </Link>
 
           {/* AD Disclosure */}
           <div className="flex items-start gap-3 bg-stone-800 border border-stone-600 rounded-lg p-3 mb-10 max-w-2xl">
@@ -268,6 +287,44 @@ export default function BestElemsSkincorePage() {
         </div>
       </section>
 
+      {/* ── Quick Selection Table ─────────────────────────────────────── */}
+      <section className="bg-white border-b border-stone-200">
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xs font-bold tracking-[0.25em] uppercase text-amber-600 mb-3 text-center">
+              Quick Selection
+            </p>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-stone-900 mb-8 text-center">
+              Find Your Formula
+            </h2>
+            <div className="overflow-x-auto rounded-xl border border-stone-200">
+              <table className="w-full text-sm text-left">
+                <thead>
+                  <tr className="bg-stone-900 text-white">
+                    <th className="px-5 py-3.5 font-semibold tracking-wide text-xs uppercase">Product</th>
+                    <th className="px-5 py-3.5 font-semibold tracking-wide text-xs uppercase">Best For</th>
+                    <th className="px-5 py-3.5 font-semibold tracking-wide text-xs uppercase">Key Benefit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {quickSelection.map((row, i) => (
+                    <tr key={row.href} className={i % 2 === 0 ? "bg-white" : "bg-stone-50"}>
+                      <td className="px-5 py-3.5 font-medium text-stone-900">
+                        <a href={row.href} className="hover:text-amber-600 transition-colors">
+                          {row.name}
+                        </a>
+                      </td>
+                      <td className="px-5 py-3.5 text-stone-600">{row.bestFor}</td>
+                      <td className="px-5 py-3.5 text-stone-600">{row.keyBenefit}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── The Selection ──────────────────────────────────────────── */}
       <main id="the-selection" className="max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
 
@@ -325,7 +382,7 @@ export default function BestElemsSkincorePage() {
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-stone-900 leading-tight mt-4 mb-2">
                     {product.name}
                   </h3>
-                  <p className="text-2xl font-bold text-stone-800 mb-6">
+                  <p className="text-2xl font-bold font-body tabular-nums text-stone-800 mb-6">
                     {product.price}
                   </p>
 
@@ -350,7 +407,7 @@ export default function BestElemsSkincorePage() {
                     <p className="text-xs font-bold tracking-widest uppercase text-stone-400 mb-2">
                       Expert Verdict
                     </p>
-                    <p className="text-sm text-stone-600 leading-relaxed italic">
+                    <p className="font-display text-sm text-stone-600 leading-relaxed italic">
                       {product.expertVerdict}
                     </p>
                   </div>
@@ -451,27 +508,15 @@ export default function BestElemsSkincorePage() {
         }`}
         aria-hidden={!showStickyBar}
       >
-        <div className="bg-stone-900 border-t border-stone-700 shadow-2xl px-4 py-3">
-          <div className="flex items-center gap-3">
-            <div className="flex-1 min-w-0">
-              <p className="text-xs text-stone-400 truncate uppercase tracking-wider font-medium">
-                The Elite 4
-              </p>
-              <p className="text-sm font-semibold text-white truncate">
-                Shop ELEMIS Pro-Collagen
-              </p>
-            </div>
-            <a
-              href={products[0].affiliateLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-shrink-0 bg-amber-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-1.5 hover:bg-amber-400 transition-all duration-200"
-            >
-              Shop Amazon
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
+        <a
+          href={products[0].affiliateLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 bg-white border-t border-stone-200 shadow-lg px-4 py-3 text-sm font-semibold text-stone-900 hover:bg-stone-50 transition-colors"
+        >
+          Shop ELEMIS Official on Amazon
+          <ArrowRight className="w-4 h-4 text-amber-500" />
+        </a>
       </div>
     </div>
   )
