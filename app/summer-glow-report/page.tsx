@@ -45,7 +45,7 @@ const products: Product[] = [
     award: "Best Overall",
     awardBg: "bg-amber-500",
     awardText: "text-white",
-    image: "https://m.media-amazon.com/images/I/61Nl-X7L1VL._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/81ztFgsPifL._AC_UF350,350_QL80_.jpg",
     description:
       "A 1-hour express tanning foam that delivers a deep, golden bronze without the typical DHA scent.",
     pros: [
@@ -65,7 +65,7 @@ const products: Product[] = [
     award: "Best No-Mess",
     awardBg: "bg-sky-600",
     awardText: "text-white",
-    image: "https://m.media-amazon.com/images/I/61z-oK7qB7L._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/81AQCxs+xCL._AC_UF350,350_QL80_.jpg",
     description:
       "A transfer-resistant clear gel that lets you tan without staining your white clothes or bed sheets.",
     pros: [
@@ -105,7 +105,7 @@ const products: Product[] = [
     award: "Best Outdoor Oil",
     awardBg: "bg-orange-600",
     awardText: "text-white",
-    image: "https://m.media-amazon.com/images/I/61j39066+IL._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/41eVF6v4XCL._AC_UF350,350_QL80_.jpg",
     description:
       "A tanning oil designed for outdoor use that accelerates the natural tanning process for a deep, dark glow.",
     pros: [

@@ -45,7 +45,7 @@ const products: Product[] = [
     award: "Best for Emotional Wellness",
     awardBg: "bg-amber-500",
     awardText: "text-white",
-    image: "https://m.media-amazon.com/images/I/71u2tLqW9rL._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/51IYfURQ8pL._AC_UF350,350_QL80_.jpg",
     description:
       'Known as the "Sunshine Spice," this pure saffron liquid extract supports emotional balance, mood elevation, and eye health.',
     pros: [
@@ -64,7 +64,7 @@ const products: Product[] = [
     award: "Best for Cellular Health",
     awardBg: "bg-emerald-600",
     awardText: "text-white",
-    image: "https://m.media-amazon.com/images/I/71bZz6eS3ML._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/51zN7KthgFL._AC_UF350,350_QL80_.jpg",
     description:
       "A powerful combination for cellular health, metabolic support, and overall wellness. Perfect for prenatal and long-term health optimization.",
     pros: [
