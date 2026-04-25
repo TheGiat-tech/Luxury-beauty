@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "Best LED Face Masks of 2025 | Expert-Tested Reviews | Luxury Beauty",
   description:
     "Our dermatologist-reviewed guide to the best LED face masks for anti-aging, acne treatment, and skin rejuvenation. Find the perfect device for your skin goals.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: { url: "/icon.png", type: "image/png" },
+  },
   openGraph: {
     title: "Best LED Face Masks of 2025 | Expert-Tested Reviews",
     description:
