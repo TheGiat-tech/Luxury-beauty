@@ -3,7 +3,7 @@ import Link from "next/link"
 import Breadcrumb from "../../components/Breadcrumb"
 
 export const metadata: Metadata = {
-  title: "The $280 Serum Secret: Why High-Ticket Skincare Ingredients Actually Cost More | Luxury Beauty",
+  title: "The $280 Serum Secret: Why High-Ticket Skincare Ingredients Actually Cost More | Glowvigo",
   description:
     "An analytical deep-dive into the extraction complexity, molecular stability, and patented actives — like Pro-Xylane — that justify the premium price tag of luxury serums from Lancôme and ELEMIS.",
   openGraph: {
@@ -31,7 +31,7 @@ export default function LuxuryIngredientsScience() {
           The $280 Serum Secret: Why High-Ticket Skincare Ingredients Actually Cost More
         </h1>
         <p className="text-sm text-slate-400">
-          By the Luxury Beauty Editorial Team &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; 10 min read
+          By the Glowvigo Editorial Team &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; 10 min read
         </p>
         <hr className="mt-8 border-gray-200" />
       </header>

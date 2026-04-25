@@ -4,7 +4,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
-  title: "Best LED Face Masks of 2025 | Expert-Tested Reviews | Luxury Beauty",
+  title: "Best LED Face Masks of 2025 | Expert-Tested Reviews | Glowvigo",
   description:
     "Our dermatologist-reviewed guide to the best LED face masks for anti-aging, acne treatment, and skin rejuvenation. Find the perfect device for your skin goals.",
   icons: {

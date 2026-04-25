@@ -3,7 +3,7 @@ import Link from "next/link"
 import Breadcrumb from "../../components/Breadcrumb"
 
 export const metadata: Metadata = {
-  title: "How Does Red Light Therapy Actually Work for Anti-Aging? The Science Explained | Luxury Beauty",
+  title: "How Does Red Light Therapy Actually Work for Anti-Aging? The Science Explained | Glowvigo",
   description:
     "Discover the cellular science behind red light therapy and LED face masks — from ATP production to collagen stimulation — explained clearly by our experts.",
   openGraph: {
@@ -32,7 +32,7 @@ export default function HowRedLightTherapyWorks() {
           How Does Red Light Therapy Actually Work for Anti-Aging? The Science Explained
         </h1>
         <p className="text-sm text-slate-400">
-          By the Luxury Beauty Editorial Team &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; 8 min read
+          By the Glowvigo Editorial Team &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; 8 min read
         </p>
         <hr className="mt-8 border-gray-200" />
       </header>
