@@ -42,7 +42,7 @@ const products: Product[] = [
     focus: "The 14-Day Wrinkle Reducer",
     edition: "I",
     price: "$254.20",
-    image: "https://m.media-amazon.com/images/I/71M6SjD8FGL._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/61EqS5g3CeL._AC_UF350,350_QL80_.jpg",
     investment: [
       "Clinically proven to reduce wrinkles visible in as little as 14 days",
       "Padina Pavonica marine algae delivers deep cellular hydration",
@@ -60,7 +60,7 @@ const products: Product[] = [
     focus: "Cellular Regeneration Overnight",
     edition: "II",
     price: "$148.75",
-    image: "https://m.media-amazon.com/images/I/71S8wUo4dML._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/61-Xb8rUbbL._AC_UF1000,1000_QL80_.jpg",
     investment: [
       "Formulated for peak skin regeneration during sleep cycles",
       "Rich but breathable — won't clog pores or feel heavy",
@@ -78,7 +78,7 @@ const products: Product[] = [
     focus: "Superior Daily Shield",
     edition: "III",
     price: "$119.00",
-    image: "https://m.media-amazon.com/images/I/71X8k8X-5TL._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/61EU70GZWTL._AC_UF350,350_QL80_.jpg",
     investment: [
       "Broad-spectrum SPF 30 with zero white cast — invisible on all skin tones",
       "Full Pro-Collagen anti-aging actives in every application",
@@ -96,7 +96,7 @@ const products: Product[] = [
     focus: "Elasticity & Firmness Innovation",
     edition: "IV",
     price: "$99.00",
-    image: "https://m.media-amazon.com/images/I/61K-K1V9AFL._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/51q7Yw1cOCL._AC_UF894,1000_QL80_.jpg",
     investment: [
       "Next-generation firming serum targeting structural elasticity",
       "Lightweight, fast-absorbing — ideal as a first-layer treatment",
