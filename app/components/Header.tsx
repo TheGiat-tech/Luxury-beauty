@@ -27,7 +27,7 @@ export default function Header() {
           >
             <Sparkles className="w-5 h-5 text-amber-500" />
             <span className="text-sm font-semibold tracking-widest uppercase text-slate-900">
-              Luxury Beauty
+              Glowvigo
             </span>
           </Link>
 

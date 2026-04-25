@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import Breadcrumb from "../components/Breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure | Luxury Beauty",
-  description: "Affiliate Disclosure for Luxury Beauty – how we earn commissions through affiliate partnerships.",
+  title: "Affiliate Disclosure | Glowvigo",
+  description: "Affiliate Disclosure for Glowvigo – how we earn commissions through affiliate partnerships.",
 }
 
 export default function AffiliateDisclosure() {
@@ -33,7 +33,7 @@ export default function AffiliateDisclosure() {
             <h2 className="text-xl font-semibold text-slate-800 mb-3">What This Means for You</h2>
             <p>
               Some of the links on this website are &quot;affiliate links.&quot; This means that if you click on
-              the link and purchase an item, Luxury Beauty may receive an affiliate commission at no
+              the link and purchase an item, Glowvigo may receive an affiliate commission at no
               additional cost to you. The price you pay remains the same whether or not you use our
               affiliate link.
             </p>

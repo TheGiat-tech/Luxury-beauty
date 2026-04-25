@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import Breadcrumb from "../components/Breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Luxury Beauty",
-  description: "Terms of Service for Luxury Beauty – your rights and responsibilities when using our site.",
+  title: "Terms of Service | Glowvigo",
+  description: "Terms of Service for Glowvigo – your rights and responsibilities when using our site.",
 }
 
 export default function TermsOfService() {
@@ -23,7 +23,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-xl font-semibold text-slate-800 mb-3">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using the Luxury Beauty website (&quot;Site&quot;), you agree to be bound by
+              By accessing or using the Glowvigo website (&quot;Site&quot;), you agree to be bound by
               these Terms of Service (&quot;Terms&quot;). If you do not agree to these Terms, please do not
               use the Site.
             </p>
@@ -44,7 +44,7 @@ export default function TermsOfService() {
             <h2 className="text-xl font-semibold text-slate-800 mb-3">3. Intellectual Property</h2>
             <p>
               All content on this Site, including text, graphics, logos, and images, is the property of
-              Luxury Beauty or its content suppliers and is protected by applicable intellectual property
+              Glowvigo or its content suppliers and is protected by applicable intellectual property
               laws. You may not reproduce, distribute, or create derivative works without our express
               written permission.
             </p>
@@ -64,7 +64,7 @@ export default function TermsOfService() {
               </li>
               <li>
                 Engage in any conduct that restricts or inhibits anyone&apos;s use or enjoyment of the
-                Site, or which we determine may harm Luxury Beauty or users of the Site.
+                Site, or which we determine may harm Glowvigo or users of the Site.
               </li>
               <li>Use any automated data collection methods, robots, or spiders to scrape the Site.</li>
             </ul>
@@ -94,7 +94,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-xl font-semibold text-slate-800 mb-3">7. Limitation of Liability</h2>
             <p>
-              To the fullest extent permitted by applicable law, Luxury Beauty and its owners, employees,
+              To the fullest extent permitted by applicable law, Glowvigo and its owners, employees,
               and affiliates shall not be liable for any indirect, incidental, special, consequential, or
               punitive damages, including without limitation loss of profits, data, or goodwill, arising
               out of or in connection with your use of (or inability to use) the Site or its content,

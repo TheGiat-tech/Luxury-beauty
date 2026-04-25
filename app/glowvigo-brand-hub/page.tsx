@@ -589,14 +589,14 @@ export default function GlowvigoBrandHubPage() {
               </div>
               <div>
                 <p className="font-semibold text-stone-900 text-lg mb-1">
-                  The Luxury Beauty Editorial Team
+                  The Glowvigo Editorial Team
                 </p>
                 <p className="text-sm text-stone-400 mb-4 uppercase tracking-wider font-medium">
                   Prestige Skincare Specialists
                 </p>
                 <p className="text-stone-600 leading-relaxed text-sm">
                   With over a decade of hands-on testing across the prestige
-                  skincare and wellness landscape, our team of luxury beauty
+                  skincare and wellness landscape, our team of Glowvigo
                   specialists and licensed estheticians has evaluated hundreds
                   of clinical formulas. We partner with board-certified
                   dermatologists to assess efficacy, bioavailability, and
@@ -612,7 +612,7 @@ export default function GlowvigoBrandHubPage() {
                 Affiliate Disclosure
               </p>
               <p className="text-xs text-stone-500 leading-relaxed mb-4">
-                Luxury Beauty participates in the Amazon Associates Program and
+                Glowvigo participates in the Amazon Associates Program and
                 other affiliate advertising programs. When you purchase through
                 links on this page, we may earn a commission at no additional
                 cost to you. Our editorial recommendations are based on
@@ -624,7 +624,7 @@ export default function GlowvigoBrandHubPage() {
               <p className="text-xs text-stone-500 leading-relaxed">
                 This page features products from an exclusive partnership with
                 Glowvigo via Amazon Creator Connections. All opinions expressed
-                are those of the Luxury Beauty editorial team.
+                are those of the Glowvigo editorial team.
               </p>
             </div>
 

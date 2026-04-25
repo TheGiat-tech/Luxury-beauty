@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import Breadcrumb from "../components/Breadcrumb"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Luxury Beauty",
-  description: "Privacy Policy for Luxury Beauty – how we collect, use, and protect your information.",
+  title: "Privacy Policy | Glowvigo",
+  description: "Privacy Policy for Glowvigo – how we collect, use, and protect your information.",
 }
 
 export default function PrivacyPolicy() {
@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-xl font-semibold text-slate-800 mb-3">1. Introduction</h2>
             <p>
-              Welcome to Luxury Beauty (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). We are committed to
+              Welcome to Glowvigo (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). We are committed to
               protecting your personal information and your right to privacy. This Privacy Policy explains
               how we collect, use, disclose, and safeguard your information when you visit our website.
             </p>
