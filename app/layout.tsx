@@ -4,9 +4,21 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 export const metadata: Metadata = {
-  title: "Best LED Face Masks of 2025 | Expert-Tested Reviews | Glowvigo",
+  title: {
+    template: "%s | Glowvigo",
+    default:
+      "Glowvigo | The Intersection of Cellular Intelligence & Clinical Beauty",
+  },
   description:
-    "Our dermatologist-reviewed guide to the best LED face masks for anti-aging, acne treatment, and skin rejuvenation. Find the perfect device for your skin goals.",
+    "Expert-led investigations into luxury skincare, bio-hacking, and clinical results. We decode the science of longevity and luminosity for the modern aesthetic.",
+  keywords: [
+    "Luxury Skincare",
+    "Clinical Beauty",
+    "Bio-hacking",
+    "Cellular Health",
+    "Anti-aging Science",
+    "Glowvigo",
+  ],
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -15,10 +27,15 @@ export const metadata: Metadata = {
     apple: { url: "/icon.png", type: "image/png" },
   },
   openGraph: {
-    title: "Best LED Face Masks of 2025 | Expert-Tested Reviews",
+    title: "Glowvigo: Beyond Skin. The Future of Beauty.",
     description:
-      "Expert-reviewed guide to the best LED face masks for anti-aging and skin rejuvenation.",
-    type: "article",
+      "Clinical-grade insights into the world's most exclusive wellness formulas.",
+    images: [{ url: "/og-image.png" }],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
