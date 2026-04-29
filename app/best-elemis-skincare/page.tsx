@@ -358,13 +358,13 @@ export default function BestElemsSkincorePage() {
               <div className={`grid grid-cols-1 md:grid-cols-2 gap-0 bg-white border border-stone-200 rounded-2xl overflow-hidden shadow-sm`}>
 
                 {/* Image Column */}
-                <div className={`relative bg-stone-100 ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                  <div className="aspect-[4/3] md:aspect-auto md:h-full min-h-64">
+                <div className={`relative bg-white ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                  <div className="flex flex-col items-center justify-center h-64 md:h-full min-h-[320px] py-10 px-8">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover"
+                      className="mx-auto max-w-[200px] w-full h-full object-contain"
                     />
                   </div>
                   {/* Focus Tag */}
