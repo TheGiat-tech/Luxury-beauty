@@ -2,7 +2,9 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Sparkles, Menu, X, ArrowLeft } from "lucide-react"
+import Image from "next/image"
+import { Menu, X, ArrowLeft } from "lucide-react"
+import logo from "../logo.png"
 
 const navLinks = [
   { label: "Top Picks", href: "/#top-picks" },
@@ -23,12 +25,9 @@ export default function Header() {
           {/* Site title → home */}
           <Link
             href="/"
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
-            <Sparkles className="w-5 h-5 text-amber-500" />
-            <span className="text-sm font-semibold tracking-widest uppercase text-slate-900">
-              Glowvigo
-            </span>
+            <Image src={logo} alt="Glowvigo" height={40} style={{ width: "auto" }} />
           </Link>
 
           {/* Desktop nav */}
