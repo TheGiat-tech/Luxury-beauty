@@ -97,7 +97,6 @@ const jsonLdSchema = {
       offers: {
         "@type": "Offer",
         url: p.affiliateLink,
-        priceCurrency: "USD",
         availability: "https://schema.org/InStock",
       },
     },
@@ -276,7 +275,7 @@ export default function BeautyFromWithinPage() {
                   rel="noopener noreferrer"
                   className="w-full bg-slate-900 text-white text-xs font-semibold px-3 py-2.5 rounded-xl flex items-center justify-center gap-1.5 hover:-translate-y-0.5 hover:bg-slate-800 transition-all duration-200"
                 >
-                  Shop on Amazon
+                  Check Price on Amazon
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
@@ -337,7 +336,7 @@ export default function BeautyFromWithinPage() {
                           className="w-full bg-slate-900 text-white font-semibold px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:bg-slate-800 transition-all duration-200 text-sm"
                         >
                           <ShoppingBag className="w-4 h-4" />
-                          Shop on Amazon
+                          Check Price on Amazon
                           <ExternalLink className="w-3.5 h-3.5 opacity-60" />
                         </a>
                       </div>
@@ -457,7 +456,7 @@ export default function BeautyFromWithinPage() {
               rel="noopener noreferrer"
               className="flex-shrink-0 bg-slate-900 text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-1.5 hover:-translate-y-0.5 hover:bg-slate-800 transition-all duration-200"
             >
-              Shop on Amazon
+              Check Price on Amazon
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

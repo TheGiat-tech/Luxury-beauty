@@ -236,11 +236,10 @@ const topPicks = products.slice(0, 4)
 
 type ComparisonKey = "keyActive" | "usage" | "skinType" | "size"
 
-const comparisonFeatures: { label: string; key: ComparisonKey | "price" }[] = [
+const comparisonFeatures: { label: string; key: ComparisonKey }[] = [
   { label: "Key Active", key: "keyActive" },
   { label: "Usage", key: "usage" },
   { label: "Skin Type", key: "skinType" },
-  { label: "Price", key: "price" },
   { label: "Size", key: "size" },
 ]
 
@@ -440,10 +439,8 @@ export default function Home() {
                   {product.name}
                 </p>
                 <span className="block text-xs text-slate-500 mb-3">
-                  Check current price &amp; deals
+                  Premium Selection
                 </span>
-
-                {/* CTA */}
                 <a
                   href={product.affiliateLink}
                   target="_blank"
@@ -508,7 +505,7 @@ export default function Home() {
 
                       <div className="mt-4">
                         <span className="block text-sm text-slate-500 mb-2">
-                          Check current price &amp; deals
+                          Premium Selection
                         </span>
                         <a
                           href={product.affiliateLink}
@@ -517,7 +514,7 @@ export default function Home() {
                           className="w-full bg-slate-900 text-white font-semibold px-6 py-3 rounded-xl flex items-center justify-center gap-2 hover:-translate-y-0.5 hover:bg-slate-800 transition-all duration-200 text-sm"
                         >
                           <ShoppingBag className="w-4 h-4" />
-                          Shop on Amazon
+                          Check Price on Amazon
                           <ExternalLink className="w-3.5 h-3.5 opacity-60" />
                         </a>
                       </div>
@@ -717,18 +714,7 @@ export default function Home() {
                         key={p.id}
                         className="py-3.5 px-4 text-center text-slate-600"
                       >
-                        {feature.key === "price" ? (
-                          <a
-                            href={p.affiliateLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm font-semibold text-amber-600 hover:text-amber-700 underline underline-offset-2 transition-colors"
-                          >
-                            Check Price
-                          </a>
-                        ) : (
-                          String(p[feature.key as ComparisonKey])
-                        )}
+                        {String(p[feature.key as ComparisonKey])}
                       </td>
                     ))}
                   </tr>

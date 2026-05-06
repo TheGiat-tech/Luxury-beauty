@@ -138,7 +138,6 @@ const jsonLdSchema = {
       offers: {
         "@type": "Offer",
         url: p.affiliateLink,
-        priceCurrency: "USD",
         availability: "https://schema.org/InStock",
       },
     },

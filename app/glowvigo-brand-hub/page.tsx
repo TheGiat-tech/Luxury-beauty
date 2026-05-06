@@ -132,7 +132,6 @@ const jsonLdSchema = {
       offers: {
         "@type": "Offer",
         url: p.affiliateLink,
-        priceCurrency: "USD",
         availability: "https://schema.org/InStock",
       },
     },
@@ -490,7 +489,7 @@ export default function GlowvigoBrandHubPage() {
                     className="mt-auto w-full bg-stone-900 text-white font-semibold px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 hover:bg-stone-800 hover:-translate-y-0.5 transition-all duration-200 text-sm"
                   >
                     <ShoppingBag className="w-4 h-4" />
-                    Shop on Amazon
+                    Check Price on Amazon
                     <ExternalLink className="w-3.5 h-3.5 opacity-60" />
                   </a>
                 </div>
@@ -616,7 +615,7 @@ export default function GlowvigoBrandHubPage() {
                   rel="noopener noreferrer"
                   className="mt-auto inline-flex items-center gap-1.5 text-xs font-semibold text-amber-600 hover:text-amber-700 transition-colors"
                 >
-                  Shop on Amazon
+                  Check Price on Amazon
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
