@@ -26,7 +26,6 @@ interface Product {
   name: string
   focus: string
   edition: string
-  price: string
   image: string
   investment: string[]
   expertVerdict: string
@@ -41,7 +40,6 @@ const products: Product[] = [
     name: "ELEMIS Pro-Collagen Marine Cream",
     focus: "The 14-Day Wrinkle Reducer",
     edition: "I",
-    price: "$254.20",
     image: "https://m.media-amazon.com/images/I/61EqS5g3CeL._AC_UF350,350_QL80_.jpg",
     investment: [
       "Clinically proven to reduce wrinkles visible in as little as 14 days",
@@ -59,7 +57,6 @@ const products: Product[] = [
     name: "ELEMIS Pro-Collagen Night Cream",
     focus: "Cellular Regeneration Overnight",
     edition: "II",
-    price: "$148.75",
     image: "https://m.media-amazon.com/images/I/61-Xb8rUbbL._AC_UF1000,1000_QL80_.jpg",
     investment: [
       "Formulated for peak skin regeneration during sleep cycles",
@@ -77,7 +74,6 @@ const products: Product[] = [
     name: "ELEMIS Pro-Collagen Marine Cream SPF 30",
     focus: "Superior Daily Shield",
     edition: "III",
-    price: "$119.00",
     image: "https://m.media-amazon.com/images/I/61EU70GZWTL._AC_UF350,350_QL80_.jpg",
     investment: [
       "Broad-spectrum SPF 30 with zero white cast — invisible on all skin tones",
@@ -95,7 +91,6 @@ const products: Product[] = [
     name: "ELEMIS Pro-Collagen Future Restore Serum",
     focus: "Elasticity & Firmness Innovation",
     edition: "IV",
-    price: "$99.00",
     image: "https://m.media-amazon.com/images/I/51q7Yw1cOCL._AC_UF894,1000_QL80_.jpg",
     investment: [
       "Next-generation firming serum targeting structural elasticity",
@@ -137,8 +132,6 @@ const jsonLdSchema = {
       offers: {
         "@type": "Offer",
         url: p.affiliateLink,
-        price: p.price.replace("$", ""),
-        priceCurrency: "USD",
         availability: "https://schema.org/InStock",
       },
     },
@@ -382,8 +375,8 @@ export default function BestElemsSkincorePage() {
                   <h3 className="font-display text-2xl md:text-3xl font-bold text-stone-900 leading-tight mt-4 mb-2">
                     {product.name}
                   </h3>
-                  <p className="text-2xl font-bold font-body tabular-nums text-stone-800 mb-6">
-                    {product.price}
+                  <p className="text-sm font-semibold tracking-widest uppercase text-amber-700 mb-6">
+                    Premium Selection
                   </p>
 
                   {/* Why It's Worth the Investment */}
@@ -419,7 +412,7 @@ export default function BestElemsSkincorePage() {
                     className="mt-auto w-full bg-stone-900 text-white font-semibold px-6 py-3.5 rounded-xl flex items-center justify-center gap-2 hover:bg-stone-800 hover:-translate-y-0.5 transition-all duration-200 text-sm"
                   >
                     <ShoppingBag className="w-4 h-4" />
-                    Shop on Amazon
+                    Check Price on Amazon
                     <ExternalLink className="w-3.5 h-3.5 opacity-60" />
                   </a>
                 </div>
