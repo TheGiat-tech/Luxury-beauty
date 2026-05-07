@@ -5,12 +5,9 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 
 const googleTagId =
-  [
-    process.env.NEXT_PUBLIC_GOOGLE_TAG_ID,
-    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
-  ]
-    .map((value) => value?.trim())
-    .find(Boolean) ?? ""
+  process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim() ||
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ||
+  ""
 
 const hasGoogleTagId = /^(G|GT|AW|DC)-[A-Z0-9]+$/.test(googleTagId)
 
@@ -65,14 +62,13 @@ export default function RootLayout({
       <head>
         {hasGoogleTagId && (
           <>
-            <Script
+            <script
               id="google-analytics"
-              strategy="beforeInteractive"
+              async
               src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
-            />
-            <Script
+            ></script>
+            <script
               id="google-analytics-config"
-              strategy="beforeInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
@@ -81,7 +77,7 @@ export default function RootLayout({
                   gtag('config', '${googleTagId}');
                 `,
               }}
-            />
+            ></script>
           </>
         )}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
