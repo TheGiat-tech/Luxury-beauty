@@ -10,6 +10,8 @@ const googleTagId =
   ""
 
 const hasGoogleTagId = /^(G|GT|AW|DC)-[A-Z0-9]+$/.test(googleTagId)
+const encodedGoogleTagId = encodeURIComponent(googleTagId)
+const serializedGoogleTagId = JSON.stringify(googleTagId)
 
 export const metadata: Metadata = {
   title: {
@@ -65,7 +67,7 @@ export default function RootLayout({
             <script
               id="google-analytics"
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${encodedGoogleTagId}`}
             ></script>
             <script
               id="google-analytics-config"
@@ -74,7 +76,7 @@ export default function RootLayout({
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${googleTagId}');
+                  gtag('config', ${serializedGoogleTagId});
                 `,
               }}
             ></script>
