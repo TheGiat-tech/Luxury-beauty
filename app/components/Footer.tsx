@@ -21,6 +21,9 @@ export default function Footer() {
         </p>
 
         <nav className="flex justify-center gap-4 text-xs text-slate-400" aria-label="Legal">
+          <Link href="/brands" className="hover:text-slate-600 underline underline-offset-2 transition-colors">
+            Brands Directory
+          </Link>
           <Link href="/blog/luxury-ingredients-science" className="hover:text-slate-600 underline underline-offset-2 transition-colors">
             The Science of High-Ticket Skincare Ingredients
           </Link>

@@ -66,6 +66,24 @@ const brands: Brand[] = [
     slug: "/summer-glow-report",
     accolade: "Best Self-Tan",
   },
+  {
+    id: "drops-of-nature",
+    name: "Drops of Nature",
+    category: "Wellness & Inside-Out Beauty",
+    shortDescription:
+      "Pioneering liquid supplements that target beauty at the cellular level. Clinically studied saffron and inositol extracts that combat stress-aging and support lasting luminosity from within.",
+    slug: "/beauty-from-within",
+    accolade: "Best Wellness Brand",
+  },
+  {
+    id: "glowvigo",
+    name: "Glowvigo",
+    category: "Wellness & Inside-Out Beauty",
+    shortDescription:
+      "Our house brand of bio-hacking beauty formulas. Four clinically engineered editions — serum, night cream, liquid drops, and a starter set — built for measurable, inside-out results.",
+    slug: "/glowvigo-brand-hub",
+    accolade: "Editor's Pick",
+  },
 ]
 
 // ─── Derived Categories ───────────────────────────────────────────────────────
