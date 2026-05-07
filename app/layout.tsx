@@ -4,6 +4,15 @@ import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
+const googleTagId =
+  process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim() ||
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ||
+  ""
+
+const hasGoogleTagId = /^(G|GT|AW|DC)-[A-Z0-9]+$/.test(googleTagId)
+const encodedGoogleTagId = encodeURIComponent(googleTagId)
+const serializedGoogleTagId = JSON.stringify(googleTagId)
+
 export const metadata: Metadata = {
   title: {
     template: "%s | Glowvigo",
@@ -53,25 +62,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/^G-[A-Z0-9]+$/.test(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "") && (
+        {hasGoogleTagId && (
           <>
-            <Script
+            <script
               id="google-analytics"
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-            />
-            <Script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${encodedGoogleTagId}`}
+            ></script>
+            <script
               id="google-analytics-config"
-              strategy="afterInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+                  gtag('config', ${serializedGoogleTagId});
                 `,
               }}
-            />
+            ></script>
           </>
         )}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
