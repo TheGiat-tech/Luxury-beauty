@@ -98,6 +98,22 @@ export default function RootLayout({
         {children}
         <Footer />
         <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-974274636"
+        />
+        <Script
+          id="google-ads-tag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-974274636');
+            `,
+          }}
+        />
+        <Script
           id="pinterest-tag-init"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
