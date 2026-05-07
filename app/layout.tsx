@@ -4,6 +4,16 @@ import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
+const googleTagId =
+  [
+    process.env.NEXT_PUBLIC_GOOGLE_TAG_ID,
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+  ]
+    .map((value) => value?.trim())
+    .find(Boolean) ?? ""
+
+const hasGoogleTagId = /^(G|GT|AW|DC)-[A-Z0-9]+$/.test(googleTagId)
+
 export const metadata: Metadata = {
   title: {
     template: "%s | Glowvigo",
@@ -53,22 +63,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/^G-[A-Z0-9]+$/.test(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "") && (
+        {hasGoogleTagId && (
           <>
             <Script
               id="google-analytics"
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+              strategy="beforeInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
             />
             <Script
               id="google-analytics-config"
-              strategy="afterInteractive"
+              strategy="beforeInteractive"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+                  gtag('config', '${googleTagId}');
                 `,
               }}
             />
