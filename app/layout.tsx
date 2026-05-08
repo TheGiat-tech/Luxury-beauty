@@ -62,21 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-974274636"
-        ></script>
-        <script
-          id="google-ads-head-tag"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-974274636');
-            `,
-          }}
-        ></script>
+        {/* הגדרה דינמית ממשתני סביבה (אם קיימים) */}
         {hasGoogleTagId && (
           <>
             <script
@@ -109,9 +95,25 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        {/* הטמעת Google Tag המעודכנת והתקנית ל-Next.js */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-490320FF8Z"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-new" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-490320FF8Z');
+          `}
+        </Script>
+
         <Header />
         {children}
         <Footer />
+        
+        {/* הטמעת Pinterest */}
         <Script
           id="pinterest-tag-init"
           strategy="afterInteractive"
