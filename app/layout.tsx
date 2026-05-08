@@ -24,9 +24,12 @@ const primaryGoogleTagId = hasGoogleTagIds ? googleTagIds[0] : null
 const encodedPrimaryGoogleTagId = primaryGoogleTagId
   ? encodeURIComponent(primaryGoogleTagId)
   : ""
-const googleTagConfigScript = googleTagIds
-  .map((tagId) => `gtag('config', ${JSON.stringify(tagId)});`)
-  .join("")
+const googleTagConfigScript = [
+  "window.dataLayer = window.dataLayer || [];",
+  "function gtag(){dataLayer.push(arguments);}",
+  "gtag('js', new Date());",
+  ...googleTagIds.map((tagId) => `gtag('config', ${JSON.stringify(tagId)});`),
+].join("\n")
 
 export const metadata: Metadata = {
   title: {
@@ -85,12 +88,7 @@ export default function RootLayout({
               src={`https://www.googletagmanager.com/gtag/js?id=${encodedPrimaryGoogleTagId}`}
             />
             <Script id="google-tag-config" strategy="beforeInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                ${googleTagConfigScript}
-              `}
+              {googleTagConfigScript}
             </Script>
           </>
         )}
