@@ -62,6 +62,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-974274636"
+        ></script>
+        <script
+          id="google-ads-head-tag"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-974274636');
+            `,
+          }}
+        ></script>
         {hasGoogleTagId && (
           <>
             <script
@@ -97,22 +112,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-974274636"
-        />
-        <Script
-          id="google-ads-tag"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-974274636');
-            `,
-          }}
-        />
         <Script
           id="pinterest-tag-init"
           strategy="afterInteractive"
