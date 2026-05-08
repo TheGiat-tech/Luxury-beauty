@@ -329,7 +329,7 @@ export default function SummerGlowReportPage() {
                 </span>
 
                 {/* Thumbnail */}
-                <div className="w-full h-36 max-h-40 rounded-xl overflow-hidden mb-3 bg-stone-100 flex items-center justify-center">
+                <div className="w-full h-36 rounded-xl overflow-hidden mb-3 bg-stone-100 flex items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={product.image}
@@ -392,7 +392,7 @@ export default function SummerGlowReportPage() {
                   <div className="flex flex-col md:flex-row gap-8">
                     {/* Left — Image + CTA */}
                     <div className="w-full md:w-72 flex-shrink-0">
-                      <div className="w-full h-64 max-h-72 flex justify-center items-center rounded-xl overflow-hidden bg-stone-100">
+                      <div className="w-full h-64 flex justify-center items-center rounded-xl overflow-hidden bg-stone-100">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={product.image}
