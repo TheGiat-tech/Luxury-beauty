@@ -85,7 +85,7 @@ const products: Product[] = [
     award: "Best for Beginners",
     awardBg: "bg-rose-500",
     awardText: "text-white",
-    image: "https://m.media-amazon.com/images/I/61D0W3fH6IL._SL1500_.jpg",
+    image: "https://m.media-amazon.com/images/I/51G5QvQrrbL._SL1080_.jpg",
     description:
       "A daily hydrating lotion that builds a natural, gradual bronze while keeping skin supple.",
     pros: [
@@ -392,12 +392,12 @@ export default function SummerGlowReportPage() {
                   <div className="flex flex-col md:flex-row gap-8">
                     {/* Left — Image + CTA */}
                     <div className="w-full md:w-72 flex-shrink-0">
-                      <div className="h-48 md:h-auto md:aspect-[4/3] rounded-xl overflow-hidden bg-stone-100">
+                      <div className="w-full h-64 max-h-72 flex justify-center items-center rounded-xl overflow-hidden bg-stone-100">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       </div>
 
