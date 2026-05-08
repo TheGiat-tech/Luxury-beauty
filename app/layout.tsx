@@ -4,14 +4,28 @@ import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
-const googleTagId =
-  process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim() ||
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ||
-  ""
+const GOOGLE_TAG_ID_PATTERN = /^(G|GT|AW|DC)-[A-Z0-9]+$/
+const DEFAULT_GOOGLE_TAG_IDS = ["AW-974274636"]
 
-const hasGoogleTagId = /^(G|GT|AW|DC)-[A-Z0-9]+$/.test(googleTagId)
-const encodedGoogleTagId = encodeURIComponent(googleTagId)
-const serializedGoogleTagId = JSON.stringify(googleTagId)
+const googleTagIds = Array.from(
+  new Set(
+    [
+      process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim(),
+      process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim(),
+      ...DEFAULT_GOOGLE_TAG_IDS,
+    ].filter(
+      (tagId): tagId is string => !!tagId && GOOGLE_TAG_ID_PATTERN.test(tagId)
+    )
+  )
+)
+
+const primaryGoogleTagId = googleTagIds[0]
+const encodedPrimaryGoogleTagId = primaryGoogleTagId
+  ? encodeURIComponent(primaryGoogleTagId)
+  : ""
+const googleTagConfigScript = googleTagIds
+  .map((tagId) => `gtag('config', ${JSON.stringify(tagId)});`)
+  .join("\n")
 
 export const metadata: Metadata = {
   title: {
@@ -62,39 +76,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-974274636"
-        ></script>
-        <script
-          id="google-ads-head-tag"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-974274636');
-            `,
-          }}
-        ></script>
-        {hasGoogleTagId && (
+        {primaryGoogleTagId && (
           <>
-            <script
-              id="google-analytics"
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${encodedGoogleTagId}`}
-            ></script>
-            <script
-              id="google-analytics-config"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', ${serializedGoogleTagId});
-                `,
-              }}
-            ></script>
+            <Script
+              id="google-tag-src"
+              strategy="beforeInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${encodedPrimaryGoogleTagId}`}
+            />
+            <Script id="google-tag-config" strategy="beforeInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                ${googleTagConfigScript}
+              `}
+            </Script>
           </>
         )}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
