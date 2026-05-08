@@ -19,13 +19,14 @@ const googleTagIds = Array.from(
   )
 )
 
-const primaryGoogleTagId = googleTagIds[0]
+const hasGoogleTagIds = googleTagIds.length > 0
+const primaryGoogleTagId = hasGoogleTagIds ? googleTagIds[0] : null
 const encodedPrimaryGoogleTagId = primaryGoogleTagId
   ? encodeURIComponent(primaryGoogleTagId)
   : ""
 const googleTagConfigScript = googleTagIds
   .map((tagId) => `gtag('config', ${JSON.stringify(tagId)});`)
-  .join("\n")
+  .join("")
 
 export const metadata: Metadata = {
   title: {
@@ -76,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {primaryGoogleTagId && (
+        {hasGoogleTagIds && (
           <>
             <Script
               id="google-tag-src"
