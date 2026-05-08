@@ -329,12 +329,12 @@ export default function SummerGlowReportPage() {
                 </span>
 
                 {/* Thumbnail */}
-                <div className="w-full aspect-square rounded-xl overflow-hidden mb-3 bg-stone-100">
+                <div className="w-full h-36 max-h-40 rounded-xl overflow-hidden mb-3 bg-stone-100 flex items-center justify-center">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain p-2"
                   />
                 </div>
 
@@ -397,7 +397,7 @@ export default function SummerGlowReportPage() {
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-contain"
+                          className="w-full h-full object-contain p-4"
                         />
                       </div>
 
