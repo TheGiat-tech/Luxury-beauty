@@ -7,7 +7,7 @@ import Footer from "./components/Footer"
 // Supported Google tag prefixes: GA4 (G-), Google tag (GT-), Ads (AW-), and Floodlight (DC-).
 const googleTagPattern = /^(G|GT|AW|DC)-[A-Z0-9]+$/
 const isValidGoogleTagId = (tagId?: string): tagId is string =>
-  Boolean(tagId) && googleTagPattern.test(tagId)
+  typeof tagId === "string" && tagId.length > 0 && googleTagPattern.test(tagId)
 
 const googleTagIds = Array.from(
   new Set(
