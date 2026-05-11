@@ -95,20 +95,6 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        {/* הטמעת Google Tag המעודכנת והתקנית ל-Next.js */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-490320FF8Z"
-          strategy="afterInteractive"
-        />
-        <Script id="google-tag-new" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-490320FF8Z');
-          `}
-        </Script>
-
         <Header />
         {children}
         <Footer />
