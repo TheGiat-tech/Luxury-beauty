@@ -4,14 +4,23 @@ import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
-const googleTagId =
-  process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim() ||
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ||
-  ""
+const googleTagPattern = /^(G|GT|AW|DC)-[A-Z0-9]+$/
+const googleTagIds = Array.from(
+  new Set(
+    [
+      process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim(),
+      process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim(),
+      process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim(),
+    ].filter((tagId): tagId is string => Boolean(tagId && googleTagPattern.test(tagId)))
+  )
+)
 
-const hasGoogleTagId = /^(G|GT|AW|DC)-[A-Z0-9]+$/.test(googleTagId)
-const encodedGoogleTagId = encodeURIComponent(googleTagId)
-const serializedGoogleTagId = JSON.stringify(googleTagId)
+const primaryGoogleTagId = googleTagIds[0] ?? ""
+const hasGoogleTagIds = googleTagIds.length > 0
+const encodedPrimaryGoogleTagId = encodeURIComponent(primaryGoogleTagId)
+const googleTagConfigScript = googleTagIds
+  .map((tagId) => `gtag('config', ${JSON.stringify(tagId)});`)
+  .join("\n")
 
 export const metadata: Metadata = {
   title: {
@@ -63,12 +72,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* הגדרה דינמית ממשתני סביבה (אם קיימים) */}
-        {hasGoogleTagId && (
+        {hasGoogleTagIds && (
           <>
             <script
               id="google-analytics"
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${encodedGoogleTagId}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${encodedPrimaryGoogleTagId}`}
             ></script>
             <script
               id="google-analytics-config"
@@ -77,7 +86,7 @@ export default function RootLayout({
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', ${serializedGoogleTagId});
+                  ${googleTagConfigScript}
                 `,
               }}
             ></script>
