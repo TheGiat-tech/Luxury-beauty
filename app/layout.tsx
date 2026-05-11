@@ -24,7 +24,7 @@ const hasGoogleTagIds = googleTagIds.length > 0
 const encodedGoogleTagIdForScript = encodeURIComponent(googleTagIdForScript)
 const googleTagConfigScript = googleTagIds
   .map((tagId) => `gtag('config', ${JSON.stringify(tagId)});`)
-  .join("\n")
+  .join(" ")
 
 export const metadata: Metadata = {
   title: {
