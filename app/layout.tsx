@@ -4,14 +4,27 @@ import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
-const googleTagId =
-  process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim() ||
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ||
-  ""
+// Supported Google tag prefixes: GA4 (G-), Google tag (GT-), Ads (AW-), and Floodlight (DC-).
+const googleTagPattern = /^(G|GT|AW|DC)-[A-Z0-9]+$/
+const isValidGoogleTagId = (tagId?: string): tagId is string =>
+  typeof tagId === "string" && tagId.length > 0 && googleTagPattern.test(tagId)
 
-const hasGoogleTagId = /^(G|GT|AW|DC)-[A-Z0-9]+$/.test(googleTagId)
-const encodedGoogleTagId = encodeURIComponent(googleTagId)
-const serializedGoogleTagId = JSON.stringify(googleTagId)
+const googleTagIds = Array.from(
+  new Set(
+    [
+      process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim(),
+      process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim(),
+      process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim(),
+    ].filter(isValidGoogleTagId)
+  )
+)
+
+const googleTagIdForScript = googleTagIds[0] ?? ""
+const hasGoogleTagIds = googleTagIds.length > 0
+const encodedGoogleTagIdForScript = encodeURIComponent(googleTagIdForScript)
+const googleTagConfigScript = googleTagIds
+  .map((tagId) => `gtag('config', ${JSON.stringify(tagId)});`)
+  .join(" ")
 
 export const metadata: Metadata = {
   title: {
@@ -63,12 +76,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* הגדרה דינמית ממשתני סביבה (אם קיימים) */}
-        {hasGoogleTagId && (
+        {hasGoogleTagIds && (
           <>
             <script
               id="google-analytics"
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${encodedGoogleTagId}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${encodedGoogleTagIdForScript}`}
             ></script>
             <script
               id="google-analytics-config"
@@ -77,7 +90,7 @@ export default function RootLayout({
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', ${serializedGoogleTagId});
+                  ${googleTagConfigScript}
                 `,
               }}
             ></script>
