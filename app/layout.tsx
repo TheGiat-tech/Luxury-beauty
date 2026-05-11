@@ -4,20 +4,24 @@ import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 
+// Supported Google tag prefixes: GA4 (G-), Google tag (GT-), Ads (AW-), and Floodlight (DC-).
 const googleTagPattern = /^(G|GT|AW|DC)-[A-Z0-9]+$/
+const isValidGoogleTagId = (tagId?: string): tagId is string =>
+  Boolean(tagId) && googleTagPattern.test(tagId)
+
 const googleTagIds = Array.from(
   new Set(
     [
       process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim(),
       process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim(),
       process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim(),
-    ].filter((tagId): tagId is string => Boolean(tagId && googleTagPattern.test(tagId)))
+    ].filter(isValidGoogleTagId)
   )
 )
 
-const primaryGoogleTagId = googleTagIds[0] ?? ""
+const googleTagIdForScript = googleTagIds[0] ?? ""
 const hasGoogleTagIds = googleTagIds.length > 0
-const encodedPrimaryGoogleTagId = encodeURIComponent(primaryGoogleTagId)
+const encodedGoogleTagIdForScript = encodeURIComponent(googleTagIdForScript)
 const googleTagConfigScript = googleTagIds
   .map((tagId) => `gtag('config', ${JSON.stringify(tagId)});`)
   .join("\n")
@@ -77,7 +81,7 @@ export default function RootLayout({
             <script
               id="google-analytics"
               async
-              src={`https://www.googletagmanager.com/gtag/js?id=${encodedPrimaryGoogleTagId}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${encodedGoogleTagIdForScript}`}
             ></script>
             <script
               id="google-analytics-config"
