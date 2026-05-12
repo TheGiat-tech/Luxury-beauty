@@ -164,8 +164,20 @@ export default function BestElemsSkincorePage() {
 
   return (
     <div className="bg-stone-50 min-h-screen font-body">
-      {/* ── Google Ads Tag ─────────────────────────────────────── */}
-      <Script
+{/* --- הוספה כאן --- */}
+<Script
+  src="https://www.googletagmanager.com/gtag/js?id=AW-18146954009"
+  strategy="afterInteractive"
+/>
+<Script id="google-ads-elemis" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18146954009');
+  `}
+</Script>
+{/* --- סוף הוספה --- */}      <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-18146954009"
         strategy="afterInteractive"
       />
