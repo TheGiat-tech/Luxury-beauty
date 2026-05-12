@@ -295,8 +295,6 @@ function StarRating({ rating, count }: { rating: number; count: number }) {
   )
 }
 
-// ─── Main Page ────────────────────────────────────────────────────────────────
-
 export default function Home() {
   const [activeProductId, setActiveProductId] = useState<string>(products[0].id)
   const [showStickyBar, setShowStickyBar] = useState(false)
@@ -332,7 +330,6 @@ export default function Home() {
 
   return (
     <div className="bg-stone-50 min-h-screen font-body">
-      {/* ── Google Ads Tag ─────────────────────────────────────── */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-18146954009"
         strategy="afterInteractive"
@@ -346,7 +343,6 @@ export default function Home() {
         `}
       </Script>
 
-      {/* ── JSON-LD Schema ─────────────────────────────────────── */}
       <Script
         id="product-schema"
         type="application/ld+json"
@@ -436,11 +432,47 @@ export default function Home() {
                           ))}
                         </ul>
                       </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="bg-white border border-gray-200 rounded-xl p-4">
+                          <h4 className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-3 flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5" /> Pros</h4>
+                          <ul className="space-y-2">
+                            {product.pros.map((pro, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-slate-700"><CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" /> {pro}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-xl p-4">
+                          <h4 className="text-xs font-bold text-red-700 uppercase tracking-wider mb-3 flex items-center gap-1.5"><XCircle className="w-3.5 h-3.5" /> Cons</h4>
+                          <ul className="space-y-2">
+                            {product.cons.map((con, i) => (
+                              <li key={i} className="flex items-start gap-2 text-sm text-slate-700"><XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" /> {con}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Further Reading</h2>
+          <div className="grid sm:grid-cols-2 gap-5">
+            <Link href="/blog/how-red-light-therapy-works" className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200">
+              <p className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-3">The Science of Skin</p>
+              <h3 className="text-lg font-bold text-slate-900 leading-snug mb-3 group-hover:text-amber-600 transition-colors">How Does Red Light Therapy Actually Work?</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">The cellular science behind LED face masks explained clearly by our experts.</p>
+              <span className="inline-flex items-center gap-1 mt-4 text-xs font-semibold text-slate-700 group-hover:text-amber-600 transition-colors">Read article <ArrowRight className="w-3 h-3" /></span>
+            </Link>
+            <Link href="/blog/luxury-ingredients-science" className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200">
+              <p className="text-xs font-semibold uppercase tracking-widest text-rose-400 mb-3">Investment in Skin Health</p>
+              <h3 className="text-lg font-bold text-slate-900 leading-snug mb-3 group-hover:text-amber-600 transition-colors">The $280 Serum Secret</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">Why high-ticket skincare ingredients actually cost more.</p>
+              <span className="inline-flex items-center gap-1 mt-4 text-xs font-semibold text-slate-700 group-hover:text-amber-600 transition-colors">Read article <ArrowRight className="w-3 h-3" /></span>
+            </Link>
           </div>
         </section>
 
