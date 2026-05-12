@@ -331,8 +331,20 @@ export default function Home() {
   return (
     <div className="bg-stone-50 min-h-screen font-body">
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-18146954009"
-        strategy="afterInteractive"
+{/* --- הוספה כאן --- */}
+<Script
+  src="https://www.googletagmanager.com/gtag/js?id=AW-18146954009"
+  strategy="afterInteractive"
+/>
+<Script id="google-ads-home" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18146954009');
+  `}
+</Script>
+{/* --- סוף הוספה --- */}        strategy="afterInteractive"
       />
       <Script id="google-ads-home" strategy="afterInteractive">
         {`
